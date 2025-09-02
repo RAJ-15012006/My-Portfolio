@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name | AI/ML Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="animated-bg"></div>
+    
+    <!-- Header/Navigation -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <span class="code-icon">{</span>
+                    <span>Raj Kumar</span>
+                    <span class="code-icon">}</span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="burger">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="greeting">Hi, I'm</span>
+                    <span class="name">Raj Kumar</span>
+                    <span class="typing-text"></span>
+                </h1>
+                <p class="hero-subtitle">AI/ML Student & Enthusiast</p>
+                <div class="hero-btns">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="image-container">
+                    <img src="image.png" alt="Your Name" class="profile-img">
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I'm a passionate AI/ML student with a strong foundation in machine learning algorithms, deep learning, and data analysis. Currently pursuing my degree in [Your Program] at [Your University].</p>
+                    <p>My journey in artificial intelligence began when [your story]. Since then, I've been fascinated by how machines can learn and make decisions.</p>
+                    <p>When I'm not training models, you can find me [your hobbies/interests].</p>
+                    <div class="education">
+                        <h3>Education</h3>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <h4>[Your Degree]</h4>
+                                <p>[Your University]</p>
+                                <p class="date">[Start Date] - [End Date]</p>
+                            </div>
+                            <!-- Add more education items as needed -->
+                        </div>
+                    </div>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-card">
+                        <div class="stat-number" data-count="10">0</div>
+                        <div class="stat-label">Projects Completed</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" data-count="5">0</div>
+                        <div class="stat-label">ML Models Deployed</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" data-count="1000">0</div>
+                        <div class="stat-label">Hours of Coding</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">My Projects</h2>
+            <div class="projects-filter">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="ml">Machine Learning</button>
+                <button class="filter-btn" data-filter="dl">Deep Learning</button>
+                <button class="filter-btn" data-filter="nlp">NLP</button>
+                <button class="filter-btn" data-filter="cv">Computer Vision</button>
+                <button class="filter-btn" data-filter="cv">OpenCV</button>
+            </div>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card" data-category="ml">
+                    <div class="project-image">
+                        <img src="image.png" alt="Project 1">
+                        <!-- Here add the img path -->
+                        <div class="project-links">
+                            <a href="https://www.netlify.com/" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                            <!-- Here add the link -->
+                            <a href="https://github.com/RAJ-15012006/glow-folio-studio" class="project-link"><i class="fab fa-github"></i></a>
+                            <!-- Git code repo. link here -->
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Predictive Analytics Model</h3>
+                        <p>A machine learning model that predicts [what it predicts] with 95% accuracy.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>Scikit-learn</span>
+                            <span>Pandas</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="ml">
+                    <div class="project-image">
+                        <img src="image.png" alt="Project 1">
+                        <!-- Here add the img path -->
+                        <div class="project-links">
+                            <a href="https://www.netlify.com/" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                            <!-- Here add the link -->
+                            <a href="https://github.com/RAJ-15012006/glow-folio-studio" class="project-link"><i class="fab fa-github"></i></a>
+                            <!-- Git code repo. link here -->
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Predictive Analytics Model</h3>
+                        <p>A machine learning model that predicts [what it predicts] with 95% accuracy.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>Scikit-learn</span>
+                            <span>Pandas</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="project-card" data-category="dl">
+                    <div class="project-image">
+                        <img src="assets/project2.jpg" alt="Project 2">
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Image Classification CNN</h3>
+                        <p>Deep learning model that classifies [what it classifies] using convolutional neural networks.</p>
+                        <div class="project-tech">
+                            <span>TensorFlow</span>
+                            <span>Keras</span>
+                            <span>OpenCV</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Add more projects as needed -->
+                 <div class="project-card" data-category="ml">
+                    <div class="project-image">
+                        <img src="image.png" alt="Project 1">
+                        <!-- Here add the img path -->
+                        <div class="project-links">
+                            <a href="https://www.netlify.com/" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                            <!-- Here add the link -->
+                            <a href="https://github.com/RAJ-15012006/glow-folio-studio" class="project-link"><i class="fab fa-github"></i></a>
+                            <!-- Git code repo. link here -->
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Predictive Analytics Model</h3>
+                        <p>A machine learning model that predicts [what it predicts] with 95% accuracy.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>Scikit-learn</span>
+                            <span>Pandas</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-container">
+                <div class="skills-category">
+                    <h3>Machine Learning</h3>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>Python</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="90"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>Scikit-learn</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="85"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>TensorFlow/Keras</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="80"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skills-category">
+                    <h3>Machine Learning</h3>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>Python</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="90"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>Scikit-learn</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="85"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>TensorFlow/Keras</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="80"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>TensorFlow/Keras</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="80"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- my -->
+                 <div class="skills-category">
+                    <h3>Data visual</h3>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>Python</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="90"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>Scikit-learn</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="85"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>TensorFlow/Keras</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="80"></div>
+                        </div>
+                    </div>
+                </div>
+                 <!-- my -->
+                
+                <div class="skills-category">
+                    <h3>Data Science</h3>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>Pandas/Numpy</span>
+                            <span>88%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="88"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>Matplotlib/Seaborn</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="85"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>SQL</span>
+                            <span>75%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="75"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skills-category">
+                    <h3>Other Technologies</h3>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>Git</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="40"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>Docker</span>
+                            <span>70%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="70"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>Flask/Django</span>
+                            <span>65%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="65"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Certifications Section -->
+<section id="certifications" class="certifications">
+    <div class="container">
+        <h2 class="section-title">Certifications</h2>
+        <div class="cert-grid">
+            <!-- Certification 1 -->
+            <div class="cert-card">
+                <i class="fas fa-certificate cert-icon"></i>
+                <h3>Ai -900</h3>
+                <p>Coursera | Stanford University</p>
+                <a href="certificatelink" target="_blank" class="btn btn-secondary">View Certificate</a>
+            </div>
+            <!-- Certification 2 -->
+            <div class="cert-card">
+                <i class="fas fa-award cert-icon"></i>
+                <h3>Deep Learning with TensorFlow</h3>
+                <p>Udemy</p>
+                <a href="#" target="_blank" class="btn btn-secondary">View Certificate</a>
+            </div>
+            <!-- Certification 3 -->
+            <div class="cert-card">
+                <i class="fas fa-medal cert-icon"></i>
+                <h3>Data Science Professional Certificate</h3>
+                <p>IBM | Coursera</p>
+                <a href="#" target="_blank" class="btn btn-secondary">View Certificate</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <i class="fas fa-envelope"></i>
+                        <h4>Email</h4>
+                        <p>your.email@example.com</p>
+                        <a href="mailto:your.email@example.com">Send a message</a>
+                    </div>
+                    <div class="contact-card">
+                        <i class="fab fa-linkedin"></i>
+                        <h4>LinkedIn</h4>
+                        <p>linkedin.com/in/yourprofile</p>
+                        <a href="https://linkedin.com/in/yourprofile" target="_blank">Connect with me</a>
+                    </div>
+
+
+
+
+                    <div class="contact-card">
+                        <i class="fab fa-linkedin"></i>
+                        <h4>LinkedIn</h4>
+                        <p>linkedin.com/in/yourprofile</p>
+                        <a href="https://linkedin.com/in/yourprofile" target="_blank">Connect with me</a>
+                    </div>
+
+
+
+
+                    <div class="contact-card">
+                        <i class="fab fa-github"></i>
+                        <h4>GitHub</h4>
+                        <p>github.com/yourusername</p>
+                        <a href="https://github.com/yourusername" target="_blank">View my projects</a>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Subject">
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="code-icon">{</span>
+                    <span>YourName</span>
+                    <span class="code-icon">}</span>
+                </div>
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-kaggle"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="year"></span> Your Name. All rights reserved.</p>
+                <p>Made with <i class="fas fa-heart"></i> and <i class="fas fa-code"></i></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

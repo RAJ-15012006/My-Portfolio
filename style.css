@@ -1824,3 +1824,22 @@ body:hover .cursor-dot {
   height: 30px;
   background: rgba(0,245,255,0.2);
 }
+
+.live-demo-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #00f5ff, #7b2fff);
+  color: #fff !important;
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: opacity 0.2s, transform 0.2s;
+  white-space: nowrap;
+}
+.live-demo-btn:hover {
+  opacity: 0.85;
+  transform: scale(1.05);
+}

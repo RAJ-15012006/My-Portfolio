@@ -1,0 +1,587 @@
+
+<!-- ==============================================
+     PREMIUM MENTORSHIP BUNDLE - ANNOUNCEMENT BANNER 
+     ============================================== -->
+<div id="mentorship-banner" class="mentorship-banner">
+    <div class="banner-content">
+        <div class="banner-info">
+            <div class="banner-icon">
+                <i class="fas fa-location-arrow"></i>
+            </div>
+            <div class="banner-text">
+                <span class="banner-title">Premium Mentorship Bundle — Chhath Puja Special Offer (50% OFF)</span>
+                <span class="banner-subtitle">ML Theory · Projects · SQL · Deployment · 1-on-1 Coaching</span>
+            </div>
+        </div>
+        <div class="banner-actions">
+            <button class="btn-banner-cta" id="view-plans-btn">View Plans</button>
+            <button class="banner-close" id="close-banner" aria-label="Close Banner">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- ==============================================
+     PREMIUM MENTORSHIP BUNDLE - PRICING MODAL
+     ============================================== -->
+<div id="mentorship-modal-overlay" class="mentorship-overlay">
+    <div class="mentorship-modal glass-card" id="mentorship-modal">
+        <button class="modal-close" id="modal-close-btn"><i class="fas fa-times"></i></button>
+        
+        <header class="modal-header">
+            <h2>Premium <span class="accent-gradient">Mentorship Bundle</span></h2>
+            <p>Learn, Build, and Get Placed — with Personal Guidance</p>
+        </header>
+
+        <div class="feature-pills">
+            <div class="feature-pill"><span class="pill-icon">🗄️</span> Master Datasets</div>
+            <div class="feature-pill"><span class="pill-icon">📓</span> Jupyter Notebooks</div>
+            <div class="feature-pill"><span class="pill-icon">📄</span> Resume Templates</div>
+            <div class="feature-pill"><span class="pill-icon">💻</span> Live Projects</div>
+        </div>
+
+        <div class="pricing-grid">
+            <!-- Starter Plan -->
+            <div class="pricing-card starter tilt-card" data-tilt>
+                <div class="plan-header">
+                    <h3>Starter</h3>
+                    <div class="price">
+                        <span class="old-price">₹1,000</span>
+                        <span class="curr-price">₹500</span>
+                    </div>
+                </div>
+                <ul class="plan-features">
+                    <li>✦ 10 Master Datasets</li>
+                    <li>✦ 5 Jupyter Notebooks</li>
+                    <li>✦ 3 Resume Templates</li>
+                    <li>✦ ML Theory (full curriculum)</li>
+                    <li>✦ Data Science & Probability</li>
+                    <li>✦ Email Support</li>
+                </ul>
+                <a href="mailto:rajkumar20053773@gmail.com?subject=Mentorship%20Enrollment%3A%20Starter%20Plan" class="btn-plan btn-starter" style="display: block; text-align: center; text-decoration: none;">Enroll in Starter</a>
+            </div>
+
+            <!-- Pro Plan -->
+            <div class="pricing-card pro tilt-card" data-tilt>
+                <div class="popular-badge">MOST POPULAR</div>
+                <div class="plan-header">
+                    <h3>Pro</h3>
+                    <div class="price">
+                        <span class="old-price">₹2,000</span>
+                        <span class="curr-price">₹1,000</span>
+                    </div>
+                </div>
+                <ul class="plan-features">
+                    <li>✦ Everything in Starter</li>
+                    <li>✦ Real-World Projects (SQL, GitHub, BI)</li>
+                    <li>✦ Project Construction & Presentation</li>
+                    <li>✦ SQL Mastery + Dashboards</li>
+                    <li>✦ GitHub Portfolio Setup</li>
+                    <li>✦ Power BI & Tableau End-to-End</li>
+                    <li>✦ Priority Email Support</li>
+                </ul>
+                <a href="mailto:rajkumar20053773@gmail.com?subject=Mentorship%20Enrollment%3A%20Pro%20Plan" class="btn-plan btn-pro" style="display: block; text-align: center; text-decoration: none;">Enroll in Pro</a>
+            </div>
+
+            <!-- Ultimate Plan -->
+            <div class="pricing-card ultimate tilt-card" data-tilt>
+                <div class="plan-header">
+                    <h3>Ultimate</h3>
+                    <div class="price">
+                        <span class="old-price">₹3,000</span>
+                        <span class="curr-price">₹1,500</span>
+                    </div>
+                </div>
+                <ul class="plan-features">
+                    <li>✦ Everything in Starter & Pro</li>
+                    <li>✦ 3 ML Projects (Full Deployment)</li>
+                    <li>✦ 3 DS Projects (Full Deployment)</li>
+                    <li>✦ 1-on-1 Live Implementation</li>
+                    <li>✦ Company Shortlisting Strategy</li>
+                    <li>✦ Resume & LinkedIn Review</li>
+                    <li>✦ 24×7 Call & WhatsApp Support</li>
+                </ul>
+                <a href="mailto:rajkumar20053773@gmail.com?subject=Mentorship%20Enrollment%3A%20Ultimate%20Plan" class="btn-plan btn-ultimate" style="display: block; text-align: center; text-decoration: none;">Enroll in Ultimate</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+/* --- DESIGN TOKENS --- */
+:root {
+  --clr-ment-bg: #07091A;
+  --clr-ment-purple: #7B2FFF;
+  --clr-ment-cyan: #00C6FF;
+  --clr-ment-gold: #FFB800;
+  --clr-ment-glass: rgba(10, 12, 30, 0.92);
+  --ment-gradient: linear-gradient(135deg, var(--clr-ment-purple), var(--clr-ment-cyan));
+  --ment-shadow: 0 10px 40px rgba(0,0,0,0.5);
+}
+
+/* --- ANNOUNCEMENT BANNER --- */
+.mentorship-banner {
+  position: fixed;
+  top: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(-150%);
+  width: 90%;
+  max-width: 900px;
+  background: var(--clr-ment-glass);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(130, 80, 255, 0.4);
+  border-radius: 50px;
+  padding: 0.6rem 1.5rem;
+  z-index: 10000;
+  box-shadow: 0 10px 30px rgba(123, 47, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.banner-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 1.5rem;
+}
+
+.banner-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.banner-icon {
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  background: var(--ment-gradient);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1.2rem;
+  transform: rotate(45deg);
+}
+
+.banner-icon i { transform: rotate(-45deg); }
+
+.banner-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.banner-title {
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.95rem;
+  font-family: 'Syne', sans-serif;
+}
+
+.banner-subtitle {
+  color: rgba(255,255,255,0.6);
+  font-size: 0.75rem;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.banner-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.btn-banner-cta {
+  background: var(--ment-gradient);
+  color: white;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  white-space: nowrap;
+}
+
+.btn-banner-cta:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(0, 198, 255, 0.4);
+}
+
+.banner-close {
+  background: transparent;
+  border: none;
+  color: rgba(255,255,255,0.4);
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.banner-close:hover { color: #fff; }
+
+/* --- PRICING MODAL --- */
+.mentorship-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(4, 5, 15, 0.95);
+  z-index: 10001;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+  padding: 2rem;
+  backdrop-filter: blur(8px);
+}
+
+.mentorship-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.mentorship-modal {
+  background: var(--clr-ment-bg);
+  width: 100%;
+  max-width: 1100px;
+  max-height: 90vh;
+  border-radius: 30px;
+  position: relative;
+  border: 1px solid rgba(255,255,255,0.05);
+  padding: 3.5rem 2.5rem;
+  overflow-y: auto;
+  transform: scale(0.85);
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 0 50px rgba(123, 47, 255, 0.1);
+}
+
+.mentorship-overlay.active .mentorship-modal {
+  transform: scale(1);
+}
+
+.modal-close {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background: rgba(255,255,255,0.05);
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+}
+
+.modal-close:hover { background: rgba(255,0,0,0.2); }
+
+.modal-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.modal-header h2 {
+  font-family: 'Syne', sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+.accent-gradient {
+  background: var(--ment-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.modal-header p {
+  color: rgba(255,255,255,0.6);
+  font-size: 1.1rem;
+}
+
+/* Feature Pills */
+.feature-pills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 3.5rem;
+}
+
+.feature-pill {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  padding: 0.6rem 1.2rem;
+  border-radius: 12px;
+  color: #fff;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  backdrop-filter: blur(10px);
+}
+
+.pill-icon { font-size: 1.1rem; }
+
+/* Pricing Grid */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.pricing-card {
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.05);
+  border-radius: 24px;
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.4s ease;
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+.pricing-card:hover {
+  background: rgba(255,255,255,0.04);
+  border-color: rgba(123, 47, 255, 0.3);
+}
+
+.pricing-card.pro {
+  background: linear-gradient(180deg, rgba(123, 47, 255, 0.05) 0%, rgba(7, 9, 26, 1) 100%);
+  border: 1px solid rgba(123, 47, 255, 0.3);
+  transform: scale(1.05);
+  box-shadow: 0 20px 50px rgba(123, 47, 255, 0.15);
+  z-index: 2;
+}
+
+.pricing-card.pro:hover {
+  box-shadow: 0 20px 60px rgba(123, 47, 255, 0.25);
+}
+
+.popular-badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--clr-ment-gold);
+  color: #000;
+  font-weight: 800;
+  font-size: 0.7rem;
+  padding: 0.3rem 1rem;
+  border-radius: 50px;
+  letter-spacing: 1px;
+}
+
+.plan-header h3 {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.5rem;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.price {
+  margin-bottom: 2rem;
+}
+
+.old-price {
+  display: block;
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.4);
+  text-decoration: line-through;
+  margin-bottom: 0.2rem;
+}
+
+.curr-price {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #fff;
+}
+
+.plan-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2.5rem 0;
+  flex-grow: 1;
+}
+
+.plan-features li {
+  color: rgba(255,255,255,0.7);
+  font-size: 0.9rem;
+  margin-bottom: 0.8rem;
+  line-height: 1.4;
+  display: flex;
+  align-items: flex-start;
+}
+
+.btn-plan {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 14px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.btn-starter, .btn-ultimate {
+  background: var(--ment-gradient);
+  color: #fff;
+}
+
+.btn-pro {
+  background: #fff;
+  color: #000;
+}
+
+.btn-plan:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+/* Animations */
+@keyframes slideDown {
+  from { transform: translateX(-50%) translateY(-150%); opacity: 0; }
+  to { transform: translateX(-50%) translateY(0); opacity: 1; }
+}
+
+@keyframes slideUpBanner {
+  from { transform: translateX(-50%) translateY(0); opacity: 1; }
+  to { transform: translateX(-50%) translateY(-150%); opacity: 0; }
+}
+
+/* Responsive */
+@media (max-width: 950px) {
+  .pricing-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .pricing-card.pro { transform: none; }
+  .pricing-card.pro:hover { transform: translateY(-5px); }
+  .mentorship-modal { padding: 2.5rem 1.5rem; }
+}
+
+@media (max-width: 600px) {
+  .banner-content { flex-direction: column; text-align: center; gap: 0.8rem; }
+  .banner-actions { width: 100%; justify-content: space-between; }
+  .btn-banner-cta { flex-grow: 1; }
+  .mentorship-banner { top: 0.5rem; border-radius: 20px; }
+  .modal-header h2 { font-size: 1.8rem; }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    
+    // Elements
+    const banner = document.getElementById('mentorship-banner');
+    const bannerClose = document.getElementById('close-banner');
+    const viewPlansBtn = document.getElementById('view-plans-btn');
+    const modalOverlay = document.getElementById('mentorship-modal-overlay');
+    const modalClose = document.getElementById('modal-close-btn');
+    const modal = document.getElementById('mentorship-modal');
+
+    // --- BANNER LOGIC ---
+    const showBanner = () => {
+        if (!sessionStorage.getItem('mentorshipBannerClosed')) {
+            // Animate using GSAP if available, else CSS
+            if (typeof gsap !== 'undefined') {
+                gsap.to(banner, {
+                    y: 0,
+                    opacity: 1,
+                    duration: 1,
+                    delay: 1,
+                    ease: "power4.out"
+                });
+            } else {
+                setTimeout(() => {
+                    banner.style.transform = 'translateX(-50%) translateY(0)';
+                    banner.style.opacity = '1';
+                }, 1000);
+            }
+
+            // Auto-hide after 8 seconds
+            setTimeout(() => {
+                if (banner && !modalOverlay.classList.contains('active')) {
+                    hideBanner();
+                }
+            }, 9000);
+        }
+    };
+
+    const hideBanner = () => {
+        if (typeof gsap !== 'undefined') {
+            gsap.to(banner, {
+                y: -200,
+                opacity: 0,
+                duration: 0.8,
+                ease: "power4.in",
+                onComplete: () => banner.remove()
+            });
+        } else {
+            banner.style.transform = 'translateX(-50%) translateY(-150%)';
+            banner.style.opacity = '0';
+            setTimeout(() => banner.remove(), 800);
+        }
+    };
+
+    bannerClose.addEventListener('click', () => {
+        sessionStorage.setItem('mentorshipBannerClosed', 'true');
+        hideBanner();
+    });
+
+    // --- MODAL LOGIC ---
+    const openModal = () => {
+        modalOverlay.classList.add('active');
+        document.body.style.overflow = 'hidden'; // Prevent scroll
+    };
+
+    const closeModal = () => {
+        modalOverlay.classList.remove('active');
+        document.body.style.overflow = ''; // Restore scroll
+    };
+
+    viewPlansBtn.addEventListener('click', () => {
+        openModal();
+    });
+
+    modalClose.addEventListener('click', closeModal);
+
+    modalOverlay.addEventListener('click', (e) => {
+        if (e.target === modalOverlay) closeModal();
+    });
+
+    // Initialize Banner
+    showBanner();
+
+    // Initialize Vanilla Tilt on pricing cards (if library loaded)
+    const initTilt = () => {
+        if (typeof VanillaTilt !== 'undefined') {
+            const cards = document.querySelectorAll('.tilt-card');
+            VanillaTilt.init(cards, {
+                max: 10,
+                speed: 400,
+                glare: true,
+                "max-glare": 0.2,
+            });
+        }
+    };
+    
+    // Small delay to ensure library is ready
+    setTimeout(initTilt, 500);
+});
+</script>

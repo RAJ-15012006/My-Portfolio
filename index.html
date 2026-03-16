@@ -1,728 +1,1122 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>RAJ SAMRENDRA KUMAR — Data Scientist</title>
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="style.css">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Raj Samrendra Kumar | Senior Data Scientist</title>
+  <meta name="description" content="Portfolio of Raj Samrendra Kumar, Data Scientist & AI Engineer.">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Syne:wght@400..800&display=swap"
+    rel="stylesheet">
+  <!-- Font Awesome 6 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- AOS CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  
-  <!-- Animated floating words background -->
-  <div class="floating-bg" aria-hidden="true">
-    <span class="word">DS</span>
-    <span class="word">ML</span>
-    <span class="word">DA</span>
-    <span class="word">AI</span>
-    <span class="word">CV</span>
+  <!-- SVG Noise Filter -->
+  <svg style="display: none;">
+    <filter id="noiseFilter">
+      <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" stitchTiles="stitch" />
+    </filter>
+  </svg>
+  <div class="noise-overlay"></div>
+
+  <!-- Custom Cursor -->
+  <div class="cursor-dot" id="cursor-dot"></div>
+  <div class="cursor-ring" id="cursor-ring"></div>
+
+  <!-- Page Loader -->
+  <div id="loader" class="loader-wrapper">
+    <div class="loader-content">
+      <div class="spinner"></div>
+      <h2 class="loader-text">Initializing<span class="dot-typing"></span></h2>
+    </div>
   </div>
 
-  <!-- NAV -->
-  <header class="site-header">
-    <div class="container nav-container">
-      <div class="brand">
-        <div class="brand-code">{</div>
-        <div class="brand-name">Raj <strong>Samrendra Kumar</strong></div>
-        <div class="brand-code">}</div>
-      </div>
+  <!-- Animated Gradient Background -->
+  <div class="mesh-bg"></div>
 
-      <nav class="nav">
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#internships">Internships</a></li>
-          <li><a href="#certifications">Certifications</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
+  <!-- Three.js Canvas -->
+  <canvas id="bg-canvas"></canvas>
 
-      <div class="nav-actions">
-        <a class="resume-btn" href="assets/heet (1)_page-0001.jpg" target="_blank">
-          <i class="fas fa-file-alt"></i> Resume
-        </a>
-        <button id="themeToggle" class="theme-btn" aria-label="Toggle theme"><i class="fas fa-moon"></i></button>
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-brand">RAJ<span class="accent">.</span>AI</a>
+      <div class="hamburger" id="hamburger">
+        <i class="fas fa-bars"></i>
       </div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#hero" class="nav-link">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#internships" class="nav-link">Internships</a></li>
+        <li><a href="#certifications" class="nav-link">Certifications</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li class="nav-resume-li"><a href="assets/autoCV__1_ (2)_removed.pdf" target="_blank"
+            class="btn btn-primary nav-resume-btn">Resume <i class="fas fa-file-pdf"></i></a></li>
+      </ul>
     </div>
-  </header>
+  </nav>
 
-  <!-- HERO -->
   <main>
-    <section id="home" class="hero">
-      <div class="container hero-inner">
-        
-        <!-- LEFT SIDE -->
-        <div class="hero-left">
-          <p class="availability">● Available for opportunities</p>
-          <h1>Hi, I'm <span class="name-gradient">RAJ SAMRENDRA KUMAR</span></h1>
-          <h2 class="role"><span class="role-highlight">Data Scientist</span> & <span class="role-highlight">B.Tech Student</span></h2>
-          
-          <!-- Updated intro -->
-          <p class="lead">
-  I am specialized in harnessing <strong>data-driven methodologies</strong> to extract actionable insights through advanced <strong>Machine Learning</strong>, <strong>Artificial Intelligence</strong>, and <strong>Big Data</strong> technologies. I am passionate about developing innovative solutions that drive measurable impact and address complex, real-world challenges.
-</p>
-
-          <!-- Extra tagline -->
-          <p class="tagline">
-            ⚡ Skilled in <span class="highlight">Python</span>, 
-            <span class="highlight">SQL</span>, 
-            <span class="highlight">Machine Learning</span>,
-            <span class="highlight">Data Science</span>,
-            <span class="highlight">Artificial Intelligence</span>
-            and <span class="highlight">Cloud Computing</span>.
-          </p>
-
-          <div class="hero-ctas">
-            <a href="#projects" class="btn primary">Explore My Work</a>
-            <a href="#contact" class="btn outline">Contact Me</a>
-          </div>
-          
-          <div class="hero-socials">
-            <a href="https://github.com/RAJ-15012006" target="_blank" title="GitHub" class="social-github"><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/raj-samrendra-kumar-85770b2ba/" target="_blank" title="LinkedIn" class="social-linkedin"><i class="fab fa-linkedin"></i></a>
-            <a href="https://leetcode.com/rajs2006" target="_blank" title="LeetCode" class="social-leetcode"><i class="fas fa-code"></i></a>
-          </div>
+    <!-- Hero Section -->
+    <section id="hero" class="section hero" style="padding-bottom: 2rem; min-height: 80vh;">
+      <div class="hero-content">
+        <p class="greeting" data-aos="fade-down" data-aos-delay="200">System Ready // Subject:</p>
+        <h1 class="hero-title" id="hero-title">
+          RAJ SAMRENDRA KUMAR
+        </h1>
+        <div class="hinton-quote" data-aos="fade-up" data-aos-delay="500">
+          <span class="quote-mark">&ldquo;</span>
+          <p>The brain has about 100 billion neurons. Each neuron is connected to about 10,000 others. That's a lot of parameters — and yet, it learns.</p>
+          <span class="quote-author">— Geoffrey Hinton, Godfather of AI</span>
         </div>
-
-        <!-- RIGHT SIDE (PHOTO CIRCLE) -->
-        <div class="hero-right">
-          <div class="photo-glow">
-            <img src="assets/1.jpg" alt="Raj Samrendra Kumar" class="profile-pic">
-          </div>
+        <div class="hero-stats-strip" data-aos="fade-up" data-aos-delay="650">
+          <div class="strip-stat"><span class="strip-num">15+</span><span class="strip-label">Projects</span></div>
+          <div class="strip-divider"></div>
+          <div class="strip-stat"><span class="strip-num">10+</span><span class="strip-label">Certifications</span></div>
+          <div class="strip-divider"></div>
+          <div class="strip-stat"><span class="strip-num">2</span><span class="strip-label">Internships</span></div>
+          <div class="strip-divider"></div>
+          <div class="strip-stat"><span class="strip-num">5+</span><span class="strip-label">AI Models</span></div>
         </div>
-
+        <h2 class="hero-subtitle">
+          > <span id="typed-text"></span><span class="typed-cursor">|</span>
+          <!-- typed strings updated below in script -->
+        </h2>
+        <div class="hero-ctas" data-aos="fade-up" data-aos-delay="800">
+          <a href="assets/autoCV__1_ (2)_removed.pdf" target="_blank" class="btn btn-primary">
+            <span>Download CV</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+          <a href="#contact" class="btn btn-outline">
+            <span>Contact Me</span>
+          </a>
+        </div>
+      </div>
+      <div class="scroll-ind">
+        <div class="mouse"></div>
+        <p>Scroll</p>
       </div>
     </section>
-  </main>
 
-
-  <!-- ABOUT ME -->
-<section id="about" class="about">
-  <div class="container">
-    <h2 class="section-title">About Me</h2>
-    <p class="section-sub">
-      Passionate about transforming complex data into actionable insights through innovative machine learning solutions.
-    </p>
-
-    <div class="card journey">
-      <h3>My Journey</h3>
-      <p>
-        As a B.Tech student specializing in Data Science, I'm driven by the endless possibilities that data offers for innovation and problem-solving.
-      </p>
-      <p>
-        My expertise spans machine learning, predictive analytics, and data visualization, with a focus on creating solutions that make a real-world impact.
-      </p>
-      <div class="mini-stats">
-        <div><strong>10+</strong><span>Projects Completed</span></div>
-        <div><strong>10+</strong><span>Certificates</span></div>
-        >
+    <!-- Special Offer Banner 1 -->
+    <div class="offer-strip-wrapper" data-aos="zoom-in">
+      <div class="offer-strip glass-card" onclick="document.getElementById('view-plans-btn').click();">
+        <div class="strip-content">
+          <span class="strip-tag">LIMITED TIME</span>
+          <span class="strip-text">CHHATH PUJA SPECIAL: <strong>GET 50% OFF</strong> ON ALL MENTORSHIP PLANS!</span>
+          <span class="strip-cta">VIEW PLANS <i class="fas fa-chevron-right"></i></span>
+        </div>
       </div>
     </div>
-  </div>
-</section>
 
-<!-- Skills Section -->
-<section id="skills">
-  <h2 class="section-title">Skills</h2>
+    <!-- About Section -->
+    <section id="about" class="section about" style="padding-top: 4rem;">
+      <div class="container flex-row">
+        <div class="about-left" data-aos="fade-right">
+          <div class="avatar-frame tilt-element">
+            <div class="avatar-glow"></div>
+            <img src="assets/1.jpg" alt="Raj Samrendra Kumar" class="avatar-img">
 
-  <!-- Programming Languages -->
-  <div class="skill-group">
-    <h3 class="group-title">Programming Languages</h3>
-    <div class="skill"><span>Python</span><div class="progress"><div class="progress-fill" style="--percent:90%"></div></div><span>90%</span></div>
-    <div class="skill"><span>Java</span><div class="progress"><div class="progress-fill" style="--percent:80%"></div></div><span>80%</span></div>
-    <div class="skill"><span>SQL</span><div class="progress"><div class="progress-fill" style="--percent:85%"></div></div><span>85%</span></div>
-  </div>
-
-  <!-- Machine Learning Tools -->
-  <div class="skill-group">
-    <h3 class="group-title">Machine Learning Tools</h3>
-    <div class="skill"><span>Linear Regression</span><div class="progress"><div class="progress-fill" style="--percent:85%"></div></div><span>85%</span></div>
-    <div class="skill"><span>Logistic Regression</span><div class="progress"><div class="progress-fill" style="--percent:80%"></div></div><span>93%</span></div>
-    <div class="skill"><span>KNN</span><div class="progress"><div class="progress-fill" style="--percent:80%"></div></div><span>94%</span></div>
-    <div class="skill"><span>Probability and Statistics</span><div class="progress"><div class="progress-fill" style="--percent:80%"></div></div><span>95%</span></div>
-    <div class="skill"><span>Naive Bayes</span><div class="progress"><div class="progress-fill" style="--percent:80%"></div></div><span>95%</span></div>
-    
-  </div>
-
-
-  <!-- Data Science Tools -->
-  <div class="skill-group">
-    <h3 class="group-title">Data Science Tools</h3>
-    <div class="skill"><span>Power BI</span><div class="progress"><div class="progress-fill" style="--percent:85%"></div></div><span>85%</span></div>
-    <div class="skill"><span>Tableau</span><div class="progress"><div class="progress-fill" style="--percent:80%"></div></div><span>90%</span></div>
-    <div class="skill"><span>Pandas</span><div class="progress"><div class="progress-fill" style="--percent:80%"></div></div><span>90%</span></div>
-    <div class="skill"><span>Numpy</span><div class="progress"><div class="progress-fill" style="--percent:80%"></div></div><span>90%</span></div>
-    <div class="skill"><span>Matplotlib</span><div class="progress"><div class="progress-fill" style="--percent:80%"></div></div><span>90%</span></div>
-    <div class="skill"><span>scikit learn</span><div class="progress"><div class="progress-fill" style="--percent:80%"></div></div><span>80%</span></div>
-  </div>
-
-  <!-- Artificial Intelligence -->
-  <div class="skill-group">
-    <h3 class="group-title">Artificial Intelligence</h3>
-    <div class="skill"><span>Deep Learning</span><div class="progress"><div class="progress-fill" style="--percent:75%"></div></div><span>75%</span></div>
-    <div class="skill"><span>Computer Vision</span><div class="progress"><div class="progress-fill" style="--percent:70%"></div></div><span>70%</span></div>
-    <div class="skill"><span>Sentiment Analysis</span><div class="progress"><div class="progress-fill" style="--percent:99%"></div></div><span>99%</span></div>
-  </div>
-
-  <!-- Big Data Tools -->
-  <div class="skill-group">
-    <h3 class="group-title">Big Data Tools</h3>
-    <div class="skill"><span>Pyspark</span><div class="progress"><div class="progress-fill" style="--percent:80%"></div></div><span>80%</span></div>
-  </div>
-</section>
-
-
-  <!-- PROJECTS -->
-<section id="projects" class="projects">
-  <div class="container">
-    <h2 class="section-title">Featured Projects</h2>
-    <p class="section-sub">A showcase of innovative data science and machine learning solutions.</p>
-
-    <div class="projects-grid">
-
-      <!-- Existing Example project card -->
-      <article class="project">
-        <div class="project-image-container">
-          <img src="assets/1_82RuzMdiRi9tX2PV3R_RyA.jpg" alt="Project screenshot">
-          <div class="project-overlay">
-            <a href="https://github.com/RAJ-15012006/Sentiment-analysis-project" target="_blank" class="overlay-btn">
-              <i class="fab fa-github"></i>
-              <span>GitHub</span>
-            </a>
-            <a href="https://www.linkedin.com/feed/update/urn:li:activity:7363969060549591042/" target="_blank" class="overlay-btn">
-              <i class="fab fa-linkedin"></i>
-              <span>LinkedIn</span>
-            </a>
+            <div class="floating-badge badge-1"><i class="fab fa-python"></i></div>
+            <div class="floating-badge badge-2"><i class="fas fa-brain"></i></div>
+            <div class="floating-badge badge-3"><i class="fas fa-database"></i></div>
           </div>
         </div>
-        <div class="project-body">
-          <h3>Sentiment Analysis</h3>
-          <p>Sentiment Analysis is a branch of Natural Language Processing (NLP) that focuses on determining the emotional tone behind a body of text. It helps identify whether the expressed sentiment is positive, negative, or neutral.</p>
-          <div class="project-links">
-            <a href="https://github.com/RAJ-15012006/Sentiment-analysis-project" target="_blank" title="Code"><i class="fab fa-github"></i></a>
-          </div>
-        </div>
-      </article>
+        <div class="about-right" data-aos="fade-left">
+          <h2 class="section-title">About <span class="accent">Me</span></h2>
 
-      <!-- New Project Card for "Customer Feedback Classifier" -->
-      <article class="project">
-        <div class="project-image-container">
-          <img src="1730904491792.jpg" alt="Customer Feedback Classifier screenshot">
-          <div class="project-overlay">
-            <a href="https://github.com/RAJ-15012006/Time_Series_DataScience" target="_blank" class="overlay-btn">
-              <i class="fab fa-github"></i>
-              <span>GitHub</span>
-            </a>
-            <a href="https://www.linkedin.com/in/raj-samrendra-kumar-85770b2ba/" target="_blank" class="overlay-btn">
-              <i class="fab fa-linkedin"></i>
-              <span>LinkedIn</span>
-            </a>
+          <div class="terminal-card glass-card">
+            <div class="terminal-header">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+              <span class="terminal-title">guest@raj-ai:~$</span>
+            </div>
+            <div class="terminal-body">
+              <p><span class="prompt">$</span> cat whoami.txt</p>
+              <p class="output text-cyan">"I am a Data Scientist and B.Tech student with a profound passion for
+                translating vast, complex datasets into strategic, impactful insights. Specializing in advanced machine
+                learning, predictive analytics, and scalable AI infrastructure."</p>
+              <p><span class="prompt">$</span> ./execute_mission.sh</p>
+              <p class="output text-accent">> Loading Algorithms... 100%<br>> Optimizing Parameters... 100%<br>>
+                Mission: Driving innovation where algorithms meet real-world problems.</p>
+              <p><span class="prompt blink">_</span></p>
+            </div>
           </div>
-        </div>
-        <div class="project-body">
-          <h3>Time Series Analysis</h3>
-          <p>Time series analysis in data science involves examining and modeling data points collected or recorded at specific time intervals to uncover trends, seasonal patterns, and forecast future values.</p>
-          <div class="project-links">
-            <a href="https://github.com/RAJ-15012006/Time_Series_DataSciencehttps://github.com/RAJ-15012006/Time_Series_DataScience" target="_blank" title="Code"><i class="fab fa-github"></i></a>
-          </div>
-        </div>
-      </article>
 
-      <!-- New Project Card for "Customer Feedback Classifier" -->
-      <article class="project">
-        <div class="project-image-container">
-          <img src="assets/istockphoto-523155194-612x612.jpg" alt="Customer Feedback Classifier screenshot">
-          <div class="project-overlay">
-            <a href="https://github.com/RAJ-15012006/stock-market-analysis" target="_blank" class="overlay-btn">
-              <i class="fab fa-github"></i>
-              <span>GitHub</span>
-            </a>
-            <a href="https://www.linkedin.com/in/raj-samrendra-kumar-85770b2ba/" target="_blank" class="overlay-btn">
-              <i class="fab fa-linkedin"></i>
-              <span>LinkedIn</span>
-            </a>
-          </div>
-        </div>
-        <div class="project-body">
-          <h3>Stock Market Analysis</h3>
-          <p>Stock market analysis in data science uses historical price, volume, and financial data to identify trends, assess risks, and build predictive models for informed investment decisions.</p>
-          <div class="project-links">
-            <a href="https://github.com/RAJ-15012006/stock-market-analysis" target="_blank" title="Code"><i class="fab fa-github"></i></a>
-          </div>
-        </div>
-      </article>
-
-<!-- New Project Card for "Customer Feedback Classifier" -->
-       <article class="project">
-        <div class="project-image-container">
-          <img src="assets/Zomato-Q3-gold-ftr.jpg" alt="Customer Feedback Classifier screenshot">
-          <div class="project-overlay">
-            <a href="https://github.com/RAJ-15012006/Bangalore-Restaurant-Zomato--analyst" target="_blank" class="overlay-btn">
-              <i class="fab fa-github"></i>
-              <span>GitHub</span>
-            </a>
-            <a href="https://www.linkedin.com/feed/update/urn:li:activity:7372222068697886720/" target="_blank" class="overlay-btn">
-              <i class="fab fa-linkedin"></i>
-              <span>LinkedIn</span>
-            </a>
-          </div>
-        </div>
-        <div class="project-body">
-          <h3>Banglore Bangalore-Restaurant-Zomato--analyst</h3>
-          <p>Bangalore restaurant analysis using Power BI involves visualizing and exploring customer trends, sales performance, and operational metrics to drive data-driven decisions and improve business efficiency.</p>
-          <div class="project-links">
-            <a href="https://github.com/RAJ-15012006/Bangalore-Restaurant-Zomato--analyst" target="_blank" title="Code"><i class="fab fa-github"></i></a>
-          </div>
-        </div>
-      </article>
-      <!-- New Project Card for "Customer Feedback Classifier" -->
-
-      <article class="project">
-        <div class="project-image-container">
-          <img src="1_wHj3tXmfaqqXxuP2kNCxWg (1).jpg" alt="Customer Feedback Classifier screenshot">
-          <div class="project-overlay">
-            <a href="https://github.com/RAJ-15012006/Feature_Engineering" target="_blank" class="overlay-btn">
-              <i class="fab fa-github"></i>
-              <span>GitHub</span>
-            </a>
-            <a href="https://www.linkedin.com/in/raj-samrendra-kumar-85770b2ba/" target="_blank" class="overlay-btn">
-              <i class="fab fa-linkedin"></i>
-              <span>LinkedIn</span>
-            </a>
-          </div>
-        </div>
-        <div class="project-body">
-          <h3>Feature Engineering</h3>
-          <p>“Expert in feature engineering to enhance model performance by transforming raw data into high-quality, predictive inputs.”</p>
-          <div class="project-links">
-            <a href="https://github.com/RAJ-15012006/Feature_Engineering" target="_blank" title="Code"><i class="fab fa-github"></i></a>
-          </div>
-        </div>
-      </article>
-
-      <!-- You can add more project cards below similarly -->
-
-      <article class="project">
-        <div class="project-image-container">
-          <img src="41572_2019_111_Fig1_HTML.png" alt="Customer Feedback Classifier screenshot">
-          <div class="project-overlay">
-            <a href="https://github.com/RAJ-15012006/breast_cancer_data_model" target="_blank" class="overlay-btn">
-              <i class="fab fa-github"></i>
-              <span>GitHub</span>
-            </a>
-            <a href="https://www.linkedin.com/in/raj-samrendra-kumar-85770b2ba/" target="_blank" class="overlay-btn">
-              <i class="fab fa-linkedin"></i>
-              <span>LinkedIn</span>
-            </a>
-          </div>
-        </div>
-        <div class="project-body">
-          <h3>Breast Cancer Analysis</h3>
-          <p>“Leveraging machine learning techniques to analyze breast cancer data for early detection, accurate diagnosis, and improved treatment outcomes.”</p>
-          <div class="project-links">
-            <a href="https://github.com/RAJ-15012006/breast_cancer_data_model" target="_blank" title="Code"><i class="fab fa-github"></i></a>
-          </div>
-        </div>
-      </article>
-
-
-    </div>
-  </div>
-</section>
-
-
-<!-- INTERNSHIPS -->
-<section id="internships" class="internships">
-  <div class="container">
-    <h2 class="section-title">Internships</h2>
-    <p class="section-sub">Professional experience and hands-on learning opportunities in data science and technology.</p>
-    
-    <!-- Filter Buttons -->
-    <div class="internship-filter-buttons">
-      <button class="filter-btn active" onclick="filterInternships('all')">All</button>
-      <button class="filter-btn" onclick="filterInternships('virtual')">Virtual</button>
-      <button class="filter-btn" onclick="filterInternships('live')">Live</button>
-    </div>
-
-    <div class="internships-grid">
-      
-      <!-- Virtual Internship 1 -->
-      <div class="internship-card" data-type="virtual">
-        <div class="internship-header">
-          <div class="company-logo">
-            <i class="fas fa-laptop"></i>
-          </div>
-          <div class="internship-info">
-            <h3>Data Science Intern <span class="internship-type virtual">Virtual</span></h3>
-            <h4>Genz Educate Wing</h4>
-            <p class="duration">14th March 2024 - 14th June 2024</p>
-          </div>
-        </div>
-        <div class="internship-description">
-          <p>Worked on machine learning projects, data analysis, and visualization. Developed predictive models and contributed to data-driven decision making processes.</p>
-          <div class="internship-actions">
-            <a href="Raj  Internship Certificate_page-0001.jpg" target="_blank" class="btn primary">
-              <i class="fas fa-certificate"></i> View Certificate
-            </a>
+          <div class="stats-container">
+            <div class="stat-box">
+              <h3 class="counter" data-target="0">0</h3>
+              <p>Years Experience</p>
+            </div>
+            <div class="stat-box">
+              <h3 class="counter" data-target="15">0</h3>
+              <p>Projects Shipped</p>
+            </div>
+            <div class="stat-box">
+              <h3 class="counter" data-target="2">0</h3>
+              <p>Internships</p>
+            </div>
           </div>
         </div>
       </div>
+    </section>
 
-      <!-- Live Internship 1 -->
-      <div class="internship-card" data-type="live">
-        <div class="internship-header">
-          <div class="company-logo">
-            <i class="fas fa-building"></i>
-          </div>
-          <div class="internship-info">
-            <h3>AI Research Intern <span class="internship-type live">Live</span></h3>
-            <h4>Tech Company</h4>
-            <p class="duration">January 2024 - March 2024</p>
-          </div>
-        </div>
-        <div class="internship-description">
-          <p>Researched and implemented AI algorithms, worked on natural language processing projects, and contributed to deep learning model development.</p>
-          <div class="internship-actions">
-            <a href="#" target="_blank" class="btn primary">
-              <i class="fas fa-certificate"></i> View Certificate
-            </a>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-<section id="certifications" class="certifications">
-  <div class="container">
-    <h2 class="section-title">Certifications</h2>
-    <p class="section-sub">Professional certifications demonstrating expertise in Machine Learning, Data Science and AI technologies.</p>
-    
-    <!-- Filter Buttons -->
-    <div class="cert-filter-buttons">
-      <button class="filter-btn active" onclick="filterCerts('all')">All</button>
-      <button class="filter-btn" onclick="filterCerts('microsoft')">Microsoft</button>
-      <button class="filter-btn" onclick="filterCerts('oracle')">Oracle</button>
-      <button class="filter-btn" onclick="filterCerts('courses')">Courses</button>
-    </div>
-    
-    <div class="certifications-grid">
-      <!-- Microsoft Certificates -->
-      <div class="certificate-card" data-category="microsoft">
-        <img src="assets/datascience_page-0001.jpg" alt="Data Science Certificate" onclick="openModal('assets/datascience_page-0001.jpg')" style="cursor: pointer;">
-        <div class="certificate-info">
-          <h3>Microsoft Data Science Certificate</h3>
-          <p>Professional Data Science Certification</p>
-          <div class="cert-buttons">
-            <a href="assets/datascience_page-0001.jpg" target="_blank" class="btn primary">View Certificate</a>
-            <a href="https://learn.microsoft.com/en-in/users/rajsamrendrakumar-9657/credentials/certification/azure-data-scientist?tab=credentials-tab" target="_blank" class="btn badge">View Badge</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="certificate-card" data-category="microsoft">
-        <img src="assets/az900.jpg" alt="Microsoft Azure Fundamentals Certificate" onclick="openModal('assets/az900.jpg')" style="cursor: pointer;">
-        <div class="certificate-info">
-          <h3>Microsoft Azure  cloud Fundamentals</h3>
-          <p>AZ-900 Microsoft Azure Cloud Services</p>
-          <div class="cert-buttons">
-            <a href="assets/az900.jpg" target="_blank" class="btn primary">View Certificate</a>
-            <a href="https://www.certiport.com/portal/Pages/PrintTranscriptInfo.aspx?action=Cert&id=414&cvid=pPlENKMaAN3msw+uibd5yQ==" target="_blank" class="btn badge">View Badge</a>
-          </div>
-        </div>
-      </div>
-
-      
-      <div class="certificate-card" data-category="microsoft">
-        <img src="assets/ai900.jpg" alt="Microsoft Azure Fundamentals Certificate" onclick="openModal('assets/az900.jpg')" style="cursor: pointer;">
-        <div class="certificate-info">
-          <h3>Microsoft Azure AI Fundamentals</h3>
-          <p>AI-900 Microsoft Azure AI Services</p>
-          <div class="cert-buttons">
-            <a href="assets/ai900.jpg" target="_blank" class="btn primary">View Certificate</a>
-            <a href="https://www.credly.com/badges/fbe16e80-8a90-4a48-9d3e-a84de0b9638a/linked_in?t=stf3qs" target="_blank" class="btn badge">View Badge</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="certificate-card" data-category="microsoft">
-        <img src="assets/pl900.jpg" alt="Microsoft Azure Fundamentals Certificate" onclick="openModal('assets/az900.jpg')" style="cursor: pointer;">
-        <div class="certificate-info">
-          <h3>Microsoft Power Platform Fundamentals</h3>
-          <p>Pl-900 Microsoft Power Platform Services</p>
-          <div class="cert-buttons">
-            <a href="assets/pl900.jpg" target="_blank" class="btn primary">View Certificate</a>
-            <a href="https://www.credly.com/badges/41ca2962-6e16-407a-a441-5c7cc475d44e/linked_in?t=stf47c" target="_blank" class="btn badge">View Badge</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="certificate-card" data-category="microsoft">
-        <img src="assets/fabric data engineer_page-0001.jpg" alt="Microsoft Azure Fundamentals Certificate" onclick="openModal('assets/az900.jpg')" style="cursor: pointer;">
-        <div class="certificate-info">
-          <h3>Microsoft Azure Data Fabric Certification</h3>
-          <p>DP-700 Microsoft Data Fabric Global Services</p>
-          <div class="cert-buttons">
-            <a href="assets/fabric data engineer_page-0001.jpg" target="_blank" class="btn primary">View Certificate</a>
-            <a href="https://learn.microsoft.com/en-in/users/rajkumar-3667/credentials/certification/fabric-data-engineer-associate?tab=credentials-tab" target="_blank" class="btn badge">View Badge</a>
-          </div>
-        </div>
-      </div>
-
-       <div class="certificate-card" data-category="microsoft">
-        <img src="assets/ai-102_page-0001.jpg" alt="Microsoft Azure Fundamentals Certificate" onclick="openModal('assets/az900.jpg')" style="cursor: pointer;">
-        <div class="certificate-info">
-          <h3>Microsoft Azure AI global Certification</h3>
-          <p>AI-102 Microsoft AI Global Services</p>
-          <div class="cert-buttons">
-            <a href="assets/ai-102_page-0001.jpg" target="_blank" class="btn primary">View Certificate</a>
-            <a href="https://learn.microsoft.com/en-in/users/rajkumar-3667/credentials/certification/fabric-data-engineer-associate?tab=credentials-tab" target="_blank" class="btn badge">View Badge</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Oracle Certificates -->
-      <div class="certificate-card" data-category="oracle">
-        <img src="assets/oracle_aifoundation_page-0001.jpg" alt="Oracle AI Foundation Certificate" onclick="openModal('assets/oracle_aifoundation_page-0001.jpg')" style="cursor: pointer;">
-        <div class="certificate-info">
-          <h3>Oracle AI Foundation Certification</h3>
-          <p>Oracle Certified AI foundation</p>
-          <div class="cert-buttons">
-            <a href="assets/oracle_aifoundation_page-0001.jpg" target="_blank" class="btn primary">View Certificate</a>
-            <a href="https://catalog-education.oracle.com/ords/certview/sharebadge?id=B594AE813254C17BEF27D0F144047D15C2A2CC54BC3A48238B8B102C5CD81309" target="_blank" class="btn badge">View Badge</a>
-          </div>
-        </div>
-      </div>
-
-       <div class="certificate-card" data-category="oracle">
-        <img src="assets/oracle_datascience_page-0001.jpg" alt="Oracle Data Science Certificate" onclick="openModal('assets/oracle_datascience_page-0001.jpg')" style="cursor: pointer;">
-        <div class="certificate-info">
-          <h3>Oracle Data Science Certification</h3>
-          <p>Oracle Certified Data Science Certification</p>
-          <div class="cert-buttons">
-            <a href="assets/oracle_datascience_page-0001.jpg" target="_blank" class="btn primary">View Certificate</a>
-            <a href="https://catalog-education.oracle.com/ords/certview/sharebadge?id=71D99D61CDC1420BFA6ECDCDA2ED5BD649D53043962C6B2B9673653A28CECC73" target="_blank" class="btn badge">View Badge</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="certificate-card" data-category="oracle">
-        <img src="assets/oracle_genai_page-0001.jpg" alt="Oracle Generative AI Certificate" onclick="openModal('assets/oracle_genai_page-0001.jpg')" style="cursor: pointer;">
-        <div class="certificate-info">
-          <h3>Oracle Generative AI Certification</h3>
-          <p>Oracle Certified Fenerative AI Certification</p>
-          <div class="cert-buttons">
-            <a href="assets/oracle_genai_page-0001.jpg" target="_blank" class="btn primary">View Certificate</a>
-            <a href="https://catalog-education.oracle.com/ords/certview/sharebadge?id=3AAA162A3B8F58B2D4B457B781C21A33A7F9E1E06777729A4E0723C1C3D22A34" target="_blank" class="btn badge">View Badge</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Course Certificates -->
-      <div class="certificate-card" data-category="courses">
-        <img src="assets/deloitte_page-0001.jpg" alt="Deloitte Data Analytics Certificate" onclick="openModal('assets/deloitte_page-0001.jpg')" style="cursor: pointer;">
-        <div class="certificate-info">
-          <h3>Deloitte Data Analytics Course</h3>
-          <p>Data Analytics Virtual Experience Program</p>
-          <div class="cert-buttons">
-            <a href="assets/deloitte_page-0001.jpg" target="_blank" class="btn primary">View Certificate</a>
-            <a href="https://www.theforage.com/simulations/deloitte-au/data-analytics-s5zy" target="_blank" class="btn badge">View Badge</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="certificate-card" data-category="courses">
-        <img src="document (1)_page-0001.jpg" alt="AWS Solutions Architecture Certificate" onclick="openModal('document (1)_page-0001.jpg')" style="cursor: pointer;">
-        <div class="certificate-info">
-          <h3>AWS Solutions Architecture Course</h3>
-          <p>AWS Solutions Architecture Virtual Experience</p>
-          <div class="cert-buttons">
-            <a href="document (1)_page-0001.jpg" target="_blank" class="btn primary">View Certificate</a>
-            <a href="https://www.theforage.com/simulations/aws-apac/solutions-architecture-ts4o" target="_blank" class="btn badge">View Badge</a>
-          </div>
-        </div>
-      </div>
-
-      
- 
-    </div>
-  </div>
-</section>
-
-
-<!-- SERVICES -->
-
-<section id="services" class="services">
-  <div class="container">
-    <h2 class="section-title">Services</h2>
-    <p class="section-sub">Offering data-driven solutions to turn raw data into impactful insights and strategies.</p>
-
-    <div class="services-grid">
-
-      <!-- Service 1 -->
-      <div class="service-card">
-        <div class="icon">
-          <i class="fas fa-chart-line"></i>
-        </div>
-        <h3>Data Analysis & Visualization</h3>
-        <p>Transforming raw data into meaningful insights through statistical analysis and visual representations.</p>
-      </div>
-
-      <!-- Service 2 -->
-      <div class="service-card">
-        <div class="icon">
-          <i class="fas fa-brain"></i>
-        </div>
-        <h3>Machine Learning Model Development</h3>
-        <p>Design, training, and deployment of custom machine learning models for predictions and automation.</p>
-      </div>
-
-      <!-- Service 3 -->
-      <div class="service-card">
-        <div class="icon">
-          <i class="fas fa-microscope"></i>
-        </div>
-        <h3>Data Visualization & BI Services</h3>
-        <p>Building interactive dashboards and reports using Excel, Tableau, and Power BI for actionable insights.</p>
-      </div>
-
-      <!-- Service 4 -->
-      <div class="service-card">
-        <div class="icon">
-          <i class="fas fa-arrow-right"></i>
-        </div>
-        <h3>Data-driven Consulting</h3>
-        <p>Providing strategic advice and recommendations based on deep and comprehensive data analysis.</p>
-      </div>
-
-      <!-- New Service 5 -->
-      <div class="service-card">
-        <div class="icon">
-          <i class="fas fa-database"></i>
-        </div>
-        <h3>Data Cleaning</h3>
-        <p>Thorough cleaning and preprocessing of messy datasets for accurate analysis.</p>
-      </div>
-
-      <!-- New Service 6 -->
-      <div class="service-card">
-        <div class="icon">
-          <i class="fas fa-star"></i>
-        </div>
-        <h3>Custom Dataset Creation</h3>
-        <p>Building specialized datasets tailored to specific research or business needs.</p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-
-    <!-- CONTACT -->
-    <section id="contact" class="contact">
+    <!-- Skills Section -->
+    <section id="skills" class="section skills">
       <div class="container">
-        <h2 class="section-title">Contact</h2>
-        <p class="section-sub">I'm open to new projects and collaborations — let's build something great.</p>
+        <h2 class="section-title text-center" data-aos="fade-up">Technical <span class="accent">Architecture</span></h2>
 
-        <div class="contact-grid">
-          <div class="contact-card card">
-            <h3>Contact Info</h3>
-            <p><strong>Email:</strong> <a href="mailto:rajkumar20053773@gmail.com">rajkumar20053773@gmail.com</a></p>
-            <p><strong>Phone:</strong> <a href="tel:+918591296816">+91 8591296816</a></p>
-            <div class="socials">
-              <a href="https://github.com/RAJ-15012006" target="_blank"><i class="fab fa-github"></i></a>
-              <a href="https://www.linkedin.com/in/raj-samrendra-kumar-85770b2ba/" target="_blank"><i class="fab fa-linkedin"></i></a>
-              <a href="https://leetcode.com/rajs2006" target="_blank"><i class="fas fa-code"></i></a>
+        <div class="skills-tags-grid">
+          <div class="skill-group-tag" data-aos="fade-up" data-aos-delay="100">
+            <h3><i class="fas fa-code"></i> Programming Languages</h3>
+            <div class="tags-wrap">
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">Java</span>
+              <span class="skill-tag">SQL</span>
+            </div>
+          </div>
+          <div class="skill-group-tag" data-aos="fade-up" data-aos-delay="200">
+            <h3><i class="fas fa-brain"></i> Machine Learning</h3>
+            <div class="tags-wrap">
+              <span class="skill-tag">Linear Regression</span>
+              <span class="skill-tag">Logistic Regression</span>
+              <span class="skill-tag">KNN</span>
+              <span class="skill-tag">Naive Bayes</span>
+              <span class="skill-tag">Probability & Statistics</span>
+            </div>
+          </div>
+          <div class="skill-group-tag" data-aos="fade-up" data-aos-delay="300">
+            <h3><i class="fas fa-chart-bar"></i> Data Science Tools</h3>
+            <div class="tags-wrap">
+              <span class="skill-tag">Power BI</span>
+              <span class="skill-tag">Tableau</span>
+              <span class="skill-tag">Pandas</span>
+              <span class="skill-tag">Numpy</span>
+              <span class="skill-tag">Matplotlib</span>
+              <span class="skill-tag">Scikit-Learn</span>
+            </div>
+          </div>
+          <div class="skill-group-tag" data-aos="fade-up" data-aos-delay="400">
+            <h3><i class="fas fa-robot"></i> Artificial Intelligence</h3>
+            <div class="tags-wrap">
+              <span class="skill-tag">Deep Learning</span>
+              <span class="skill-tag">Computer Vision</span>
+              <span class="skill-tag">Sentiment Analysis</span>
+              <span class="skill-tag">RAG (Retrieval-Augmented Generation)</span>
+              <span class="skill-tag">Agentic AI</span>
+              <span class="skill-tag">CrewAI</span>
+              <span class="skill-tag">LangChain</span>
+              <span class="skill-tag">LLMs</span>
+              <span class="skill-tag">Prompt Engineering</span>
+              <span class="skill-tag">Vector Databases</span>
+              <span class="skill-tag">Hugging Face</span>
+              <span class="skill-tag">OpenAI API</span>
+              <span class="skill-tag">Generative AI</span>
+            </div>
+          </div>
+          <div class="skill-group-tag" data-aos="fade-up" data-aos-delay="500">
+            <h3><i class="fas fa-database"></i> Big Data Tools</h3>
+            <div class="tags-wrap">
+              <span class="skill-tag">PySpark</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section projects">
+      <div class="container">
+        <h2 class="section-title" data-aos="fade-up">Featured <span class="accent">Deployments</span></h2>
+
+        <div class="bento-grid">
+          <!-- Project 1: Sentiment Analysis -->
+          <div class="bento-card tilt-element" data-aos="fade-up" data-aos-delay="100">
+            <div class="card-bg" style="background-image: url('assets/1_82RuzMdiRi9tX2PV3R_RyA.jpg');"></div>
+            <div class="card-content">
+              <div class="card-header">
+                <h3>NLP Sentiment Engine</h3>
+                <div class="tech-stack">
+                  <span>Python</span><span>NLTK</span><span>Transformers</span>
+                </div>
+              </div>
+              <p>Real-time sentiment classification pipeline accurately gauging emotional tone from text streams with
+                high precision inference.</p>
+              <div class="card-footer">
+                <canvas class="sparkline" id="spark1"></canvas>
+                <div class="card-links">
+                  <a href="https://github.com/RAJ-15012006/Sentiment-analysis-project" target="_blank"><i
+                      class="fab fa-github"></i></a>
+                </div>
+              </div>
             </div>
           </div>
 
-          <form id="contactForm" class="contact-form card">
-            <label>
-              <span>Your Name</span>
-              <input type="text" name="name" required>
-            </label>
-            <label>
-              <span>Your Email</span>
-              <input type="email" name="email" required>
-            </label>
-            <label>
-              <span>Message</span>
-              <textarea name="message" required></textarea>
-            </label>
-            <div style="display:flex;gap:8px;align-items:center;">
-              <button type="submit" class="btn primary">Send Message</button>
-              <small class="muted">Or email directly: <a href="mailto:rajkumar20053773@gmail.com">rajkumar20053773@gmail.com</a></small>
+          <!-- Project 2: Zomato (Wide) -->
+          <div class="bento-card tilt-element card-wide" data-aos="fade-up" data-aos-delay="200">
+            <div class="card-bg" style="background-image: url('assets/Zomato-Q3-gold-ftr.jpg');"></div>
+            <div class="card-content">
+              <div class="card-header">
+                <h3>Zomato Analytics Dashboard</h3>
+                <div class="tech-stack">
+                  <span>Power BI</span><span>SQL</span><span>DAX</span>
+                </div>
+              </div>
+              <p>Interactive dashboard uncovering complex restaurant trends, customer density, and sales performance
+                across Bangalore. Built using Power BI and deep SQL data extraction.</p>
+              <div class="card-footer">
+                <canvas class="sparkline" id="spark2"></canvas>
+                <div class="card-links">
+                  <a href="https://github.com/RAJ-15012006/Bangalore-Restaurant-Zomato--analyst" target="_blank"><i
+                      class="fab fa-github"></i></a>
+                </div>
+              </div>
             </div>
+          </div>
+
+          <!-- Project 3: RAG Model Flower -->
+          <div class="bento-card tilt-element" data-aos="fade-up" data-aos-delay="300">
+            <div class="card-bg" style="background: linear-gradient(135deg,#1a1a2e,#16213e);"></div>
+            <div class="card-content">
+              <div class="card-header">
+                <h3>RAG Model Flower</h3>
+                <div class="tech-stack">
+                  <span>RAG</span><span>LLM</span><span>Python</span>
+                </div>
+              </div>
+              <p>Retrieval-Augmented Generation model for intelligent flower classification and information retrieval using advanced AI techniques.</p>
+              <div class="card-footer">
+                <canvas class="sparkline" id="spark3"></canvas>
+                <div class="card-links">
+                  <a href="https://github.com/RAJ-15012006/RAG_MODEL_FLOWER" target="_blank"><i
+                      class="fab fa-github"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4: Time Series -->
+          <div class="bento-card tilt-element" data-aos="fade-up" data-aos-delay="400">
+            <div class="card-bg" style="background-image: url('1730904491792.jpg');"></div>
+            <div class="card-content">
+              <div class="card-header">
+                <h3>Time Series Forecaster</h3>
+                <div class="tech-stack">
+                  <span>Prophet</span><span>ARIMA</span>
+                </div>
+              </div>
+              <p>Advanced predictive modeling for seasonal data trends, uncovering hidden patterns in historical cycles
+                for strategic forecasting.</p>
+              <div class="card-footer">
+                <canvas class="sparkline" id="spark4"></canvas>
+                <div class="card-links">
+                  <a href="https://github.com/RAJ-15012006/Time_Series_DataScience" target="_blank"><i
+                      class="fab fa-github"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 5: Stock Market -->
+          <div class="bento-card tilt-element" data-aos="fade-up" data-aos-delay="500">
+            <div class="card-bg" style="background-image: url('assets/istockphoto-523155194-612x612.jpg');"></div>
+            <div class="card-content">
+              <div class="card-header">
+                <h3>Stock Market Analysis</h3>
+                <div class="tech-stack">
+                  <span>Python</span><span>Yfinance</span><span>Matplotlib</span>
+                </div>
+              </div>
+              <p>Analyzing historical price movements and volume data to generate technical indicators and predictive
+                market insights.</p>
+              <div class="card-footer">
+                <canvas class="sparkline" id="spark5"></canvas>
+                <div class="card-links">
+                  <a href="https://github.com/RAJ-15012006/stock-market-analysis" target="_blank"><i
+                      class="fab fa-github"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 6: COVID-19 Prediction -->
+          <div class="bento-card tilt-element" data-aos="fade-up" data-aos-delay="600">
+            <div class="card-bg" style="background-image: url('covid.jpg');"></div>
+            <div class="card-content">
+              <div class="card-header">
+                <h3>COVID-19 Prediction</h3>
+                <div class="tech-stack">
+                  <span>ML Algorithms</span><span>Feature Engineering</span>
+                </div>
+              </div>
+              <p>Expert application of feature engineering to enhance model performance by transforming raw data into
+                high-quality predictive inputs.</p>
+              <div class="card-footer">
+                <canvas class="sparkline" id="spark6"></canvas>
+                <div class="card-links">
+                  <a href="https://github.com/RAJ-15012006/covid19_dataset" target="_blank"><i
+                      class="fab fa-github"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Internships Section -->
+    <section id="internships" class="section internships">
+      <div class="container">
+        <h2 class="section-title text-center" data-aos="fade-up">Professional <span class="accent">Internships</span>
+        </h2>
+
+        <div class="timeline">
+          <!-- Internship: Data Science -->
+          <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content glass-card">
+              <span class="date">Mar 2024 - Jun 2024</span>
+              <h3>Data Science Intern <span class="badge-mini virtual">Virtual</span></h3>
+              <h4>Genz Educate Wing</h4>
+              <p>Developed exploratory data analysis pipelines, enhanced predictive capability via feature engineering,
+                and constructed BI dashboards.</p>
+              <div class="timeline-actions">
+                <a href="Raj  Internship Certificate_page-0001.jpg" target="_blank" class="btn-text">View Certificate <i
+                    class="fas fa-chevron-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="section certifications">
+      <div class="container">
+        <h2 class="section-title" data-aos="fade-up">Verified <span class="accent">Expertise</span></h2>
+
+        <!-- Microsoft Section -->
+        <div class="cert-section" data-aos="fade-up">
+          <div class="cert-section-header">
+            <i class="fab fa-microsoft"></i>
+            <h3>Microsoft</h3>
+          </div>
+          <div class="cert-grid">
+            <div class="cert-item glass-card" data-aos="zoom-in" data-aos-delay="100">
+              <div class="cert-icon-large"><i class="fab fa-microsoft"></i></div>
+              <h3>Azure Data Scientist</h3>
+              <p>Microsoft Certification</p>
+              <a href="assets/datascience_page-0001.jpg" target="_blank" class="btn-text">View Document</a>
+            </div>
+            <div class="cert-item glass-card" data-aos="zoom-in" data-aos-delay="150">
+              <div class="cert-icon-large"><i class="fab fa-microsoft"></i></div>
+              <h3>Azure Cloud Fundamentals</h3>
+              <p>AZ-900 Certification</p>
+              <a href="assets/az900.jpg" target="_blank" class="btn-text">View Document</a>
+            </div>
+            <div class="cert-item glass-card" data-aos="zoom-in" data-aos-delay="200">
+              <div class="cert-icon-large"><i class="fab fa-microsoft"></i></div>
+              <h3>Azure AI Fundamentals</h3>
+              <p>AI-900 Certification</p>
+              <a href="assets/ai900.jpg" target="_blank" class="btn-text">View Document</a>
+            </div>
+            <div class="cert-item glass-card" data-aos="zoom-in" data-aos-delay="250">
+              <div class="cert-icon-large"><i class="fab fa-microsoft"></i></div>
+              <h3>Power Platform Fundamentals</h3>
+              <p>PL-900 Certification</p>
+              <a href="assets/pl900.jpg" target="_blank" class="btn-text">View Document</a>
+            </div>
+            <div class="cert-item glass-card" data-aos="zoom-in" data-aos-delay="300">
+              <div class="cert-icon-large"><i class="fab fa-microsoft"></i></div>
+              <h3>Fabric Data Engineer</h3>
+              <p>DP-700 Certification</p>
+              <a href="assets/fabric data engineer_page-0001.jpg" target="_blank" class="btn-text">View Document</a>
+            </div>
+            <div class="cert-item glass-card" data-aos="zoom-in" data-aos-delay="350">
+              <div class="cert-icon-large"><i class="fab fa-microsoft"></i></div>
+              <h3>Azure AI Engineer</h3>
+              <p>AI-102 Certification</p>
+              <a href="assets/ai-102_page-0001.jpg" target="_blank" class="btn-text">View Document</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Oracle Section -->
+        <div class="cert-section" data-aos="fade-up">
+          <div class="cert-section-header">
+            <i class="fas fa-database"></i>
+            <h3>Oracle</h3>
+          </div>
+          <div class="cert-grid">
+            <div class="cert-item glass-card" data-aos="zoom-in" data-aos-delay="100">
+              <div class="cert-icon-large"><i class="fas fa-database"></i></div>
+              <h3>Oracle AI Foundation</h3>
+              <p>Oracle Certified</p>
+              <a href="assets/oracle_aifoundation_page-0001.jpg" target="_blank" class="btn-text">View Document</a>
+            </div>
+            <div class="cert-item glass-card" data-aos="zoom-in" data-aos-delay="150">
+              <div class="cert-icon-large"><i class="fas fa-database"></i></div>
+              <h3>Oracle Data Science</h3>
+              <p>Oracle Certified</p>
+              <a href="assets/oracle_datascience_page-0001.jpg" target="_blank" class="btn-text">View Document</a>
+            </div>
+            <div class="cert-item glass-card" data-aos="zoom-in" data-aos-delay="200">
+              <div class="cert-icon-large"><i class="fas fa-brain"></i></div>
+              <h3>Oracle Generative AI</h3>
+              <p>Oracle Certified</p>
+              <a href="assets/oracle_genai_page-0001.jpg" target="_blank" class="btn-text">View Document</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Other Certifications Section -->
+        <div class="cert-section" data-aos="fade-up">
+          <div class="cert-section-header">
+            <i class="fas fa-certificate"></i>
+            <h3>Other Certifications</h3>
+          </div>
+          <div class="cert-grid">
+            <div class="cert-item glass-card" data-aos="zoom-in" data-aos-delay="100">
+              <div class="cert-icon-large"><i class="fas fa-chart-line"></i></div>
+              <h3>Deloitte Data Analytics</h3>
+              <p>Virtual Experience</p>
+              <a href="assets/deloitte_page-0001.jpg" target="_blank" class="btn-text">View Document</a>
+            </div>
+            <div class="cert-item glass-card" data-aos="zoom-in" data-aos-delay="150">
+              <div class="cert-icon-large"><i class="fab fa-aws"></i></div>
+              <h3>AWS Solutions Architecture</h3>
+              <p>Solutions Architect</p>
+              <a href="document (1)_page-0001.jpg" target="_blank" class="btn-text">View Document</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section services">
+      <div class="container">
+        <h2 class="section-title text-center" data-aos="fade-up">Consulting <span class="accent">Services</span></h2>
+        <div class="services-grid-large">
+          <div class="service-card-v2 glass-card" data-aos="flip-up">
+            <i class="fas fa-chart-pie color-cyan"></i>
+            <h3>Data Analysis</h3>
+            <p>Transforming raw signals into actionable strategy.</p>
+          </div>
+          <div class="service-card-v2 glass-card" data-aos="flip-up" data-aos-delay="100">
+            <i class="fas fa-project-diagram color-gold"></i>
+            <h3>ML Development</h3>
+            <p>Designing custom neural architectures for automation.</p>
+          </div>
+          <div class="service-card-v2 glass-card" data-aos="flip-up" data-aos-delay="200">
+            <i class="fas fa-desktop color-cyan"></i>
+            <h3>BI Dashboards</h3>
+            <p>Real-time interactive visualizing of complex KPIs.</p>
+          </div>
+          <div class="service-card-v2 glass-card" data-aos="flip-up" data-aos-delay="300">
+            <i class="fas fa-lightbulb color-gold"></i>
+            <h3>IT Consulting</h3>
+            <p>Strategic data-driven pathways for scale.</p>
+          </div>
+          <div class="service-card-v2 glass-card" data-aos="flip-up" data-aos-delay="400">
+            <i class="fas fa-broom color-cyan"></i>
+            <h3>Data Cleaning</h3>
+            <p>High-precision preprocessing and normalization.</p>
+          </div>
+          <div class="service-card-v2 glass-card" data-aos="flip-up" data-aos-delay="500">
+            <i class="fas fa-database color-gold"></i>
+            <h3>Dataset Creation</h3>
+            <p>Engineered datasets tailored for specific research.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
+      <!-- Special Offer Banner 2 -->
+      <div class="offer-strip-wrapper" data-aos="fade-up" style="margin-bottom: 4rem;">
+        <div class="offer-strip glass-card" onclick="document.getElementById('view-plans-btn').click();"
+          style="border-color: var(--clr-gold);">
+          <div class="strip-content">
+            <span class="strip-tag" style="background: var(--clr-gold); color: #000;">HOT OFFER</span>
+            <span class="strip-text">ENROLL NOW VIA GMAIL AND SAVE <strong style="color: var(--clr-gold);">50%
+                IMMEDIATELY</strong>!</span>
+            <span class="strip-cta">GRAB OFFER <i class="fas fa-fire"></i></span>
+          </div>
+        </div>
+      </div>
+      <div class="container relative">
+        <h2 class="section-title text-center" data-aos="fade-up">Initialize <span class="accent">Handshake</span></h2>
+
+        <div class="contact-wrapper glass-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="contact-info">
+            <h3>Connect with me</h3>
+            <p>Available for freelance opportunities, open source collaborations, or full-time roles.</p>
+
+            <div class="info-list">
+              <a href="mailto:rajkumar20053773@gmail.com" class="info-item">
+                <div class="icon-box"><i class="fas fa-envelope"></i></div>
+                <span>rajkumar20053773@gmail.com</span>
+              </a>
+              <a href="tel:+918591296816" class="info-item">
+                <div class="icon-box"><i class="fas fa-phone"></i></div>
+                <span>+91 8591296816</span>
+              </a>
+            </div>
+
+            <div class="social-links">
+              <a href="https://github.com/RAJ-15012006" target="_blank" class="social-icon"><i
+                  class="fab fa-github"></i></a>
+              <a href="https://www.linkedin.com/in/raj-samrendra-kumar-85770b2ba/" target="_blank"
+                class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+              <a href="https://leetcode.com/rajs2006" target="_blank" class="social-icon"><i
+                  class="fas fa-code"></i></a>
+            </div>
+          </div>
+
+          <form id="contact-form" class="contact-form">
+            <div class="input-group">
+              <input type="text" id="name" required placeholder=" ">
+              <label for="name">Name</label>
+              <div class="input-line"></div>
+            </div>
+            <div class="input-group">
+              <input type="email" id="email" required placeholder=" ">
+              <label for="email">Email Address</label>
+              <div class="input-line"></div>
+            </div>
+            <div class="input-group">
+              <textarea id="message" required placeholder=" " rows="4"></textarea>
+              <label for="message">Transmission Data</label>
+              <div class="input-line"></div>
+            </div>
+            <button type="submit" class="btn btn-primary btn-submit">
+              <span>Execute Send</span>
+              <i class="fas fa-paper-plane"></i>
+            </button>
           </form>
         </div>
       </div>
     </section>
-
-    <footer class="site-footer">
-      <div class="container">
-        <div>© <span id="year"></span> RAJ SAMRENDRA KUMAR — All rights reserved.</div>
-      </div>
-    </footer>
   </main>
 
-  <!-- Certificate Modal -->
-  <div id="certificateModal" class="modal" onclick="closeModal()">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal()">&times;</span>
-      <img id="modalImage" src="" alt="Certificate">
+  <!-- AI Chatbot UI -->
+  <div class="chatbot-wrapper">
+    <div class="chatbot-window glass-card" id="chatbot-window">
+      <div class="chatbot-header">
+        <div class="bot-info">
+          <div class="bot-avatar"><i class="fas fa-robot"></i></div>
+          <div>
+            <h4>Raj.AI Assistant</h4>
+            <span class="online-status">Online</span>
+          </div>
+        </div>
+        <button class="close-bot" id="close-bot"><i class="fas fa-times"></i></button>
+      </div>
+      <div class="chatbot-messages" id="chatbot-messages">
+        <div class="msg bot-msg">Hello! I am Raj's AI assistant. Ask me about his skills, experience, or projects!</div>
+      </div>
+      <div class="chatbot-input">
+        <input type="text" id="chat-input" placeholder="Initialize query..." autocomplete="off" />
+        <button id="chat-send"><i class="fas fa-paper-plane"></i></button>
+      </div>
+    </div>
+    <button class="chatbot-toggle" id="chatbot-toggle" aria-label="Open Chatbot">
+      <i class="fas fa-comment-dots"></i>
+      <div class="toggle-pulse"></div>
+    </button>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container flex-row">
+      <div class="footer-brand">
+        <p>&copy; <span id="year"></span> Raj Samrendra Kumar. All Systems Operational.</p>
+      </div>
+      <a href="#hero" class="back-to-top">
+        <i class="fas fa-chevron-up"></i>
+      </a>
+    </div>
+  </footer>
+
+  <!-- Libraries (CDN) -->
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <!-- Three.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- Typed.js -->
+  <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+  <!-- AOS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <!-- Vanilla Tilt -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
+
+  <!-- Custom JS -->
+  <script src="script.js"></script>
+
+  <!-- ==============================================
+         PREMIUM MENTORSHIP BUNDLE - ANNOUNCEMENT BANNER 
+         ============================================== -->
+  <div id="mentorship-banner" class="mentorship-banner">
+    <div class="banner-content">
+      <div class="banner-info">
+        <div class="banner-icon">
+          <i class="fas fa-location-arrow"></i>
+        </div>
+        <div class="banner-text">
+          <span class="banner-title">Premium Mentorship Bundle — Chhath Puja Special Offer (50% OFF)</span>
+          <span class="banner-subtitle">ML Theory · Projects · SQL · Deployment · 1-on-1 Coaching</span>
+        </div>
+      </div>
+      <div class="banner-actions">
+        <button class="btn-banner-cta" id="view-plans-btn">View Plans</button>
+        <button class="banner-close" id="close-banner" aria-label="Close Banner">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
     </div>
   </div>
 
-  <script src="script.js"></script>
+  <!-- ==============================================
+         PREMIUM MENTORSHIP BUNDLE - PRICING MODAL
+         ============================================== -->
+  <div id="mentorship-modal-overlay" class="mentorship-overlay">
+    <div class="mentorship-modal glass-card" id="mentorship-modal">
+      <button class="modal-close" id="modal-close-btn"><i class="fas fa-times"></i></button>
+
+      <header class="modal-header">
+        <h2>Premium <span class="accent-gradient">Mentorship Bundle</span></h2>
+        <p>Learn, Build, and Get Placed — with Personal Guidance</p>
+      </header>
+
+      <div class="feature-pills">
+        <div class="feature-pill"><span class="pill-icon">🗄️</span> Master Datasets</div>
+        <div class="feature-pill"><span class="pill-icon">📓</span> Jupyter Notebooks</div>
+        <div class="feature-pill"><span class="pill-icon">📄</span> Resume Templates</div>
+        <div class="feature-pill"><span class="pill-icon">💻</span> Live Projects</div>
+      </div>
+
+      <div class="pricing-grid">
+        <!-- Starter Plan -->
+        <div class="pricing-card starter tilt-card" data-tilt>
+          <div class="plan-header">
+            <h3>Starter</h3>
+            <div class="price">
+              <span class="old-price">₹1,000</span>
+              <span class="curr-price">₹500</span>
+            </div>
+          </div>
+          <ul class="plan-features">
+            <li>✦ 10 Master Datasets</li>
+            <li>✦ 5 Jupyter Notebooks</li>
+            <li>✦ 3 Resume Templates</li>
+            <li>✦ ML Theory (full curriculum)</li>
+            <li>✦ Data Science & Probability</li>
+            <li>✦ Email Support</li>
+          </ul>
+          <a href="mailto:rajkumar20053773@gmail.com?subject=Mentorship%20Enrollment%3A%20Starter%20Plan"
+            class="btn-plan btn-starter" style="display: block; text-align: center; text-decoration: none;">Enroll in
+            Starter</a>
+        </div>
+
+        <!-- Pro Plan -->
+        <div class="pricing-card pro tilt-card" data-tilt>
+          <div class="popular-badge">MOST POPULAR</div>
+          <div class="plan-header">
+            <h3>Pro</h3>
+            <div class="price">
+              <span class="old-price">₹2,000</span>
+              <span class="curr-price">₹1,000</span>
+            </div>
+          </div>
+          <ul class="plan-features">
+            <li>✦ Everything in Starter</li>
+            <li>✦ Real-World Projects (SQL, GitHub, BI)</li>
+            <li>✦ Project Construction & Presentation</li>
+            <li>✦ SQL Mastery + Dashboards</li>
+            <li>✦ GitHub Portfolio Setup</li>
+            <li>✦ Power BI & Tableau End-to-End</li>
+            <li>✦ Priority Email Support</li>
+          </ul>
+          <a href="mailto:rajkumar20053773@gmail.com?subject=Mentorship%20Enrollment%3A%20Pro%20Plan"
+            class="btn-plan btn-pro" style="display: block; text-align: center; text-decoration: none;">Enroll in
+            Pro</a>
+        </div>
+
+        <!-- Ultimate Plan -->
+        <div class="pricing-card ultimate tilt-card" data-tilt>
+          <div class="plan-header">
+            <h3>Ultimate</h3>
+            <div class="price">
+              <span class="old-price">₹3,000</span>
+              <span class="curr-price">₹1,500</span>
+            </div>
+          </div>
+          <ul class="plan-features">
+            <li>✦ Everything in Starter & Pro</li>
+            <li>✦ 3 ML Projects (Full Deployment)</li>
+            <li>✦ 3 DS Projects (Full Deployment)</li>
+            <li>✦ 1-on-1 Live Implementation</li>
+            <li>✦ Company Shortlisting Strategy</li>
+            <li>✦ Resume & LinkedIn Review</li>
+            <li>✦ 24×7 Call & WhatsApp Support</li>
+          </ul>
+          <a href="mailto:rajkumar20053773@gmail.com?subject=Mentorship%20Enrollment%3A%20Ultimate%20Plan"
+            class="btn-plan btn-ultimate" style="display: block; text-align: center; text-decoration: none;">Enroll in
+            Ultimate</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    /* --- MENTORSHIP BUNDLE STYLES --- */
+    :root {
+      --clr-ment-bg: #07091A;
+      --clr-ment-purple: #7B2FFF;
+      --clr-ment-cyan: #00C6FF;
+      --clr-ment-gold: #FFB800;
+      --clr-ment-glass: rgba(10, 12, 30, 0.92);
+      --ment-gradient: linear-gradient(135deg, var(--clr-ment-purple), var(--clr-ment-cyan));
+    }
+
+    .mentorship-banner {
+      position: fixed;
+      top: 1.5rem;
+      left: 50%;
+      transform: translateX(-50%) translateY(-150%);
+      width: 90%;
+      max-width: 950px;
+      background: var(--clr-ment-glass);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(130, 80, 255, 0.4);
+      border-radius: 50px;
+      padding: 0.7rem 1.5rem;
+      z-index: 10000;
+      box-shadow: 0 10px 30px rgba(123, 47, 255, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+    }
+
+    .banner-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      gap: 1.5rem;
+    }
+
+    .banner-info {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .banner-icon {
+      width: 40px;
+      height: 40px;
+      min-width: 40px;
+      background: var(--ment-gradient);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      transform: rotate(45deg);
+    }
+
+    .banner-icon i {
+      transform: rotate(-45deg);
+    }
+
+    .banner-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .banner-title {
+      color: #fff;
+      font-weight: 700;
+      font-size: 0.95rem;
+    }
+
+    .banner-subtitle {
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 0.75rem;
+    }
+
+    .banner-actions {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .btn-banner-cta {
+      background: var(--ment-gradient);
+      color: white;
+      border: none;
+      padding: 0.5rem 1.5rem;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      white-space: nowrap;
+    }
+
+    .btn-banner-cta:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px rgba(0, 198, 255, 0.4);
+    }
+
+    .banner-close {
+      background: transparent;
+      border: none;
+      color: rgba(255, 255, 255, 0.4);
+      cursor: pointer;
+    }
+
+    .mentorship-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(4, 5, 15, 0.95);
+      z-index: 10001;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.4s ease;
+      padding: 2rem;
+      backdrop-filter: blur(8px);
+    }
+
+    .mentorship-overlay.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .mentorship-modal {
+      background: var(--clr-ment-bg);
+      width: 100%;
+      max-width: 1100px;
+      max-height: 90vh;
+      border-radius: 30px;
+      position: relative;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      padding: 3.5rem 2.5rem;
+      overflow-y: auto;
+      transform: scale(0.85);
+      transition: transform 0.4s ease;
+    }
+
+    .mentorship-overlay.active .mentorship-modal {
+      transform: scale(1);
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 1.5rem;
+      right: 1.5rem;
+      background: rgba(255, 255, 255, 0.05);
+      border: none;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .modal-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .modal-header h2 {
+      font-size: 2.5rem;
+      color: #fff;
+    }
+
+    .accent-gradient {
+      background: var(--ment-gradient);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .feature-pills {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 3.5rem;
+    }
+
+    .feature-pill {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 0.6rem 1.2rem;
+      border-radius: 12px;
+      color: #fff;
+      font-size: 0.85rem;
+    }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+
+    .pricing-card {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 24px;
+      padding: 2.5rem 2rem;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.4s ease;
+    }
+
+    .pricing-card.pro {
+      background: linear-gradient(180deg, rgba(123, 47, 255, 0.05) 0%, rgba(7, 9, 26, 1) 100%);
+      border: 1px solid rgba(123, 47, 255, 0.3);
+      transform: scale(1.05);
+    }
+
+    .popular-badge {
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--clr-ment-gold);
+      color: #000;
+      font-weight: 800;
+      font-size: 0.7rem;
+      padding: 0.3rem 1rem;
+      border-radius: 50px;
+    }
+
+    .curr-price {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: #fff;
+    }
+
+    .plan-features {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 2.5rem 0;
+      flex-grow: 1;
+    }
+
+    .plan-features li {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 0.9rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .btn-plan {
+      width: 100%;
+      padding: 1rem;
+      border-radius: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      border: none;
+    }
+
+    .btn-starter,
+    .btn-ultimate {
+      background: var(--ment-gradient);
+      color: #fff;
+    }
+
+    .btn-pro {
+      background: #fff;
+      color: #000;
+    }
+
+    @media (max-width: 950px) {
+      .pricing-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .pricing-card.pro {
+        transform: none;
+      }
+    }
+  </style>
+
   <script>
-    function openModal(imageSrc) {
-      document.getElementById('certificateModal').style.display = 'block';
-      document.getElementById('modalImage').src = imageSrc;
-    }
-    
-    function closeModal() {
-      document.getElementById('certificateModal').style.display = 'none';
-    }
-    
-    function filterCerts(category) {
-      const cards = document.querySelectorAll('.certificate-card');
-      const buttons = document.querySelectorAll('.cert-filter-buttons .filter-btn');
-      
-      buttons.forEach(btn => btn.classList.remove('active'));
-      event.target.classList.add('active');
-      
-      cards.forEach(card => {
-        if (category === 'all' || card.dataset.category === category) {
-          card.style.display = 'block';
-        } else {
-          card.style.display = 'none';
+    document.addEventListener('DOMContentLoaded', () => {
+      const banner = document.getElementById('mentorship-banner');
+      const viewPlansBtn = document.getElementById('view-plans-btn');
+      const modalOverlay = document.getElementById('mentorship-modal-overlay');
+
+      const showBanner = () => {
+        if (!sessionStorage.getItem('mentorshipBannerClosed')) {
+          gsap.to(banner, { y: 0, opacity: 1, duration: 1.2, delay: 1.5, ease: "power4.out" });
+          setTimeout(() => { if (banner && !modalOverlay.classList.contains('active')) hideBanner(); }, 9500);
+        }
+      };
+
+      const hideBanner = () => {
+        gsap.to(banner, { y: -200, opacity: 0, duration: 0.8, ease: "power4.in", onComplete: () => banner.remove() });
+      };
+
+      document.getElementById('close-banner').addEventListener('click', () => {
+        sessionStorage.setItem('mentorshipBannerClosed', 'true');
+        hideBanner();
+      });
+
+      viewPlansBtn.addEventListener('click', () => {
+        modalOverlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      });
+
+      document.getElementById('modal-close-btn').addEventListener('click', () => {
+        modalOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+      });
+
+      modalOverlay.addEventListener('click', (e) => {
+        if (e.target === modalOverlay) {
+          modalOverlay.classList.remove('active');
+          document.body.style.overflow = '';
         }
       });
-    }
-    
-    function filterInternships(type) {
-      const cards = document.querySelectorAll('.internship-card');
-      const buttons = document.querySelectorAll('.internship-filter-buttons .filter-btn');
-      
-      buttons.forEach(btn => btn.classList.remove('active'));
-      event.target.classList.add('active');
-      
-      cards.forEach(card => {
-        if (type === 'all' || card.dataset.type === type) {
-          card.style.display = 'block';
-        } else {
-          card.style.display = 'none';
-        }
-      });
-    }
+
+      showBanner();
+
+      if (typeof VanillaTilt !== 'undefined') {
+        VanillaTilt.init(document.querySelectorAll('.tilt-card'), { max: 10, speed: 400, glare: true, "max-glare": 0.2 });
+      }
+    });
   </script>
 </body>
+
 </html>

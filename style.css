@@ -1399,8 +1399,9 @@ body:hover .cursor-dot {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgba(0, 245, 255, 0.05);
+  background: rgba(0, 245, 255, 0.08);
   border-radius: var(--radius-md) var(--radius-md) 0 0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .bot-info {
@@ -1502,6 +1503,36 @@ body:hover .cursor-dot {
   color: #000;
   border-bottom-right-radius: 2px;
   align-self: flex-end;
+  box-shadow: 0 4px 10px rgba(0, 245, 255, 0.2);
+}
+
+.chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0 0.5rem;
+  animation: slideIn 0.4s ease-out;
+}
+
+.chip-btn {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(0, 245, 255, 0.3);
+  color: var(--clr-cyan);
+  padding: 0.5rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-family: var(--font-display);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.chip-btn:hover {
+  background: rgba(0, 245, 255, 0.1);
+  border-color: var(--clr-cyan);
+  transform: translateY(-2px);
+  box-shadow: 0 0 10px rgba(0, 245, 255, 0.2);
 }
 
 .chatbot-input {

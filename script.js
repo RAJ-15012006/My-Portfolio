@@ -452,6 +452,138 @@ document.addEventListener('DOMContentLoaded', () => {
     const chatMessages = document.getElementById('chatbot-messages');
 
     if(chatToggle && chatWindow) {
+
+        const KB = [
+            {
+                keys: ['hi','hello','hey','sup','greet'],
+                reply: "Hey there! 👋 I'm Raj's AI assistant. I can tell you about his education, AI projects, special mentorship offers, or how to contact him directly!",
+                chips: ['🎓 Education', '🔥 Special Offer', '🛠️ Skills', '📞 Contact']
+            },
+            {
+                keys: ['college','university','parul','education','degree','b.tech','btech','graduating','2027'],
+                reply: "🎓 Raj is a B.Tech student at Parul University, graduating in 2027. He's deeply involved in the AI & ML department!",
+                chips: ['🤖 AIML Interests', '💼 Projects', '📞 Contact']
+            },
+            {
+                keys: ['aiml','ai ml','enthusiast','interest','passion'],
+                reply: "🤖 Raj is an AIML enthusiast! He specializes in building real-world AI systems, including RAG models, Agentic AI, and custom ML pipelines. He's always looking to push the boundaries of what's possible with data.",
+                chips: ['💼 Projects', '📜 Certifications', '🔥 Special Offer']
+            },
+            {
+                keys: ['offer','special','chhath puja','discount','50%','mentorship','save','plan'],
+                reply: "🔥 CHHATH PUJA SPECIAL OFFER! 🔥\n\nRaj is currently offering 50% OFF on all Mentorship Plans! Whether you want to master Datasets, build Real-World Projects, or get 1-on-1 coaching, now is the best time to enroll.\n\nClick 'View Plans' or 'Grab Offer' on the screen to see the details!",
+                chips: ['🚀 Pro Plan', '⚡ Ultimate Plan', '📞 Contact']
+            },
+            {
+                keys: ['contact','email','hire','reach','connect','phone','mail','number','call','whatsapp'],
+                reply: "📞 You can reach Raj directly here:\n\n📧 Email: rajkumar20053773@gmail.com\n📱 Phone: +91 8591296816\n\nHe's available for freelance, full-time roles, or just a quick tech chat!",
+                chips: ['🐙 GitHub', '💼 LinkedIn', '🏠 Main Menu']
+            },
+            {
+                keys: ['skill','tech','stack','know','language','python','tool'],
+                reply: "🛠️ Raj's tech stack:\n\n• Languages: Python, Java, SQL\n• AI: RAG, Agentic AI, CrewAI, LangChain, LLMs\n• Data: Scikit-Learn, Pandas, Power BI, Tableau\n• Cloud: Azure AI/Data Scientist certified",
+                chips: ['💼 Projects', '📜 Certifications', '🏠 Main Menu']
+            },
+            {
+                keys: ['project','built','shipped','work','portfolio','app','demo'],
+                reply: "💼 Featured Projects:\n\n🌸 RAG Model Flower (Live!)\n📊 Zomato Analytics Dashboard\n🧠 NLP Sentiment Engine\n📈 Stock Market Prediction\n\nAll his work is meticulously documented on GitHub!",
+                chips: ['🌐 Live Demos', '🐙 GitHub', '📞 Contact']
+            },
+            {
+                keys: ['who','about','yourself','raj','tell me'],
+                reply: "👨‍💻 Raj Samrendra Kumar is an AI Engineer & Data Scientist enthusiast currently graduating in 2027. He's a problem-solver who loves turning complex data into smart AI solutions! 🚀",
+                chips: ['🎓 Education', '🛠️ Skills', '🔥 Special Offer']
+            },
+            {
+                keys: ['home','menu','restart','main'],
+                reply: "Back to the start! How else can I help you today?",
+                chips: ['🎓 Education', '🛠️ Skills', '💼 Projects', '📞 Contact']
+            }
+        ];
+
+        const chipMap = {
+            '🎓 Education': 'college',
+            '🛠️ Skills': 'skills',
+            '🤖 AIML Interests': 'aiml',
+            '💼 Projects': 'projects',
+            '📜 Certifications': 'certifications',
+            '🌐 Live Demos': 'live demo',
+            '📞 Contact': 'contact',
+            '🔥 Special Offer': 'offer',
+            '🚀 Pro Plan': 'offer',
+            '⚡ Ultimate Plan': 'offer',
+            '🐙 GitHub': 'github',
+            '💼 LinkedIn': 'linkedin',
+            '🏠 Main Menu': 'home'
+        };
+
+        const getBotResponse = (input) => {
+            const text = input.toLowerCase();
+            for (const item of KB) {
+                if (item.keys.some(k => text.includes(k))) {
+                    return { reply: item.reply, chips: item.chips || [] };
+                }
+            }
+            return { reply: "🤔 I'm not sure about that, but Raj would love to answer! Reach him at rajkumar20053773@gmail.com or use the Contact section below.", chips: ['📞 Contact','💼 Projects','🛠️ Skills'] };
+        };
+
+        const removeChips = () => {
+            chatMessages.querySelectorAll('.chip-row').forEach(el => el.remove());
+        };
+
+        const addChips = (chips) => {
+            if (!chips || chips.length === 0) return;
+            const row = document.createElement('div');
+            row.classList.add('chip-row');
+            chips.forEach(label => {
+                const btn = document.createElement('button');
+                btn.classList.add('chip-btn');
+                btn.textContent = label;
+                btn.addEventListener('click', () => {
+                    removeChips();
+                    processInput(chipMap[label] || label);
+                });
+                row.appendChild(btn);
+            });
+            chatMessages.appendChild(row);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        };
+
+        const addMessage = (text, sender) => {
+            removeChips();
+            const msgDiv = document.createElement('div');
+            msgDiv.classList.add('msg', sender === 'user' ? 'user-msg' : 'bot-msg');
+            msgDiv.style.whiteSpace = 'pre-wrap';
+            msgDiv.innerText = text;
+            chatMessages.appendChild(msgDiv);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        };
+
+        const processInput = (text) => {
+            addMessage(text, 'user');
+            const typingId = 'typing-' + Date.now();
+            const typingMsg = document.createElement('div');
+            typingMsg.classList.add('msg', 'bot-msg', 'typing');
+            typingMsg.id = typingId;
+            typingMsg.innerHTML = '<span class="dot"></span><span class="dot"></span><span class="dot"></span>';
+            chatMessages.appendChild(typingMsg);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+            setTimeout(() => {
+                const typingEl = document.getElementById(typingId);
+                if (typingEl) typingEl.remove();
+                const { reply, chips } = getBotResponse(text);
+                addMessage(reply, 'bot');
+                addChips(chips);
+            }, Math.random() * 600 + 400);
+        };
+
+        const handleChat = () => {
+            const text = chatInput.value.trim();
+            if (!text) return;
+            chatInput.value = '';
+            processInput(text);
+        };
+
         chatToggle.addEventListener('click', () => {
             chatWindow.classList.toggle('active');
             chatToggle.classList.add('hidden');
@@ -465,54 +597,13 @@ document.addEventListener('DOMContentLoaded', () => {
             chatToggle.classList.remove('hidden');
         });
 
-        const getBotResponse = (input) => {
-            const text = input.toLowerCase();
-            if(text.includes('hi') || text.includes('hello')) return "Hello! How can I assist you with Raj's profile today?";
-            if(text.includes('skill') || text.includes('tech')) return "Raj specializes in Python, Machine Learning, Data Engineering, and Web Development. He is proficient in tools like Scikit-Learn, Power BI, SQL, and Deep Learning.";
-            if(text.includes('project')) return "Raj has shipped over 6 featured projects including an NLP Sentiment Engine, Zomato Analytics, Cancer Predictor, and Stock Market Analysis. Check out the 'Projects' section for more.";
-            if(text.includes('intern') || text.includes('experience')) return "Raj has experience as an AI Research Intern at TechVenture AI and a Data Science Intern at Genz Educate Wing.";
-            if(text.includes('service') || text.includes('consult')) return "Raj offers services in Data Analysis, ML Development, BI Dashboards, IT Consulting, and Dataset Creation.";
-            if(text.includes('certif') || text.includes('award')) return "Raj holds multiple certifications from Microsoft (Azure Data Scientist, AI-900, AZ-900), Oracle (AI Foundation, Data Science), and AWS.";
-            if(text.includes('contact') || text.includes('email') || text.includes('hire')) return "You can reach Raj at rajkumar20053773@gmail.com, or drop a message via the Contact form below.";
-            if(text.includes('education') || text.includes('degree') || text.includes('b.tech')) return "Raj is pursuing a B.Tech in Data Science with a core focus on advanced AI architectures.";
-            return "I'm still learning! While I might not have the answer to that, Raj would be happy to discuss it with you. Feel free to contact him directly!";
-        };
-
-        const addMessage = (text, sender) => {
-            const msgDiv = document.createElement('div');
-            msgDiv.classList.add('msg', sender === 'user' ? 'user-msg' : 'bot-msg');
-            msgDiv.innerText = text;
-            chatMessages.appendChild(msgDiv);
-            chatMessages.scrollTop = chatMessages.scrollHeight;
-        };
-
-        const handleChat = () => {
-            const text = chatInput.value.trim();
-            if(!text) return;
-            
-            addMessage(text, 'user');
-            chatInput.value = '';
-            
-            const typingId = "typing-" + Date.now();
-            const typingMsg = document.createElement('div');
-            typingMsg.classList.add('msg', 'bot-msg', 'typing');
-            typingMsg.id = typingId;
-            typingMsg.innerHTML = '<span class="dot"></span><span class="dot"></span><span class="dot"></span>';
-            chatMessages.appendChild(typingMsg);
-            chatMessages.scrollTop = chatMessages.scrollHeight;
-
-            setTimeout(() => {
-                const typingEl = document.getElementById(typingId);
-                if(typingEl) typingEl.remove();
-                const response = getBotResponse(text);
-                addMessage(response, 'bot');
-            }, Math.random() * 1000 + 500); 
-        };
-
         chatSend.addEventListener('click', handleChat);
-        chatInput.addEventListener('keypress', (e) => {
-            if(e.key === 'Enter') handleChat();
-        });
+        chatInput.addEventListener('keypress', (e) => { if (e.key === 'Enter') handleChat(); });
+
+        // Welcome chips on load
+        setTimeout(() => {
+            addChips(['🎓 Education','🛠️ Skills','💼 Projects','📜 Certifications','📞 Contact']);
+        }, 500);
     }
 
 });

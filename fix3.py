@@ -1,0 +1,6 @@
+f = open('index.html', 'rb').read()
+count = f.count(b'autoCV__1_ (5).pdf')
+print('Found:', count)
+f = f.replace(b'autoCV__1_ (5).pdf', b'resume.pdf')
+open('index.html', 'wb').write(f)
+print('Done. resume.pdf count:', open('index.html','rb').read().count(b'resume.pdf'))

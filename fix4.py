@@ -1,0 +1,5 @@
+f = open('index.html', 'rb').read()
+print('resume.pdf found:', f.count(b'resume.pdf'))
+f = f.replace(b'resume.pdf', b'resume_1.pdf')
+open('index.html', 'wb').write(f)
+print('resume_1.pdf count:', open('index.html','rb').read().count(b'resume_1.pdf'))

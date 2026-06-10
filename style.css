@@ -497,14 +497,14 @@ body:hover .cursor-dot {
 }
 
 .hero-title {
-  font-size: clamp(3rem, 6vw, 5.5rem);
+  font-size: clamp(1.4rem, 3vw, 2.4rem);
   font-weight: 800;
   line-height: 1.1;
   margin-bottom: 1.5rem;
-  background: linear-gradient(135deg, #fff 0%, var(--clr-text-muted) 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  white-space: nowrap;
+  color: #00F5FF;
+  -webkit-text-fill-color: #00F5FF;
+  letter-spacing: 0.05em;
   /* GSAP initial state */
   opacity: 0;
   transform: translateY(30px);

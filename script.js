@@ -231,7 +231,7 @@ document.addEventListener('DOMContentLoaded', () => {
     createSparkline('spark3', [10, 25, 15, 60, 45, 80, 95], '#00F5FF'); // CV
     createSparkline('spark4', [45, 52, 38, 70, 65, 85, 92], '#FFB800'); // Time Series
     createSparkline('spark5', [30, 60, 45, 75, 55, 90, 85], '#00F5FF'); // Stock
-    createSparkline('spark6', [20, 40, 60, 50, 80, 70, 95], '#FFB800'); // COVID
+    createSparkline('spark6', [20, 40, 60, 50, 80, 70, 95], '#FFB800'); // JARVIS
 
     // --- ADVANCED THREE.JS NEURAL NETWORK BACKGROUND ---
     const initThreeJS = () => {
@@ -461,7 +461,7 @@ document.addEventListener('DOMContentLoaded', () => {
             },
             {
                 keys: ['college','university','parul','education','degree','b.tech','btech','graduating','2027'],
-                reply: "🎓 Raj is a B.Tech student at Parul University, graduating in 2027. He's deeply involved in the AI & ML department!",
+                reply: "🎓 Raj is a B.Tech student at Parul University, graduating in 2027 with a CGPA of 7.77/10. He's deeply involved in the AI & ML department!",
                 chips: ['🤖 AIML Interests', '💼 Projects', '📞 Contact']
             },
             {
@@ -486,7 +486,7 @@ document.addEventListener('DOMContentLoaded', () => {
             },
             {
                 keys: ['project','built','shipped','work','portfolio','app','demo'],
-                reply: "💼 Featured Projects:\n\n🌸 RAG Model Flower (Live!)\n📊 Zomato Analytics Dashboard\n🧠 NLP Sentiment Engine\n📈 Stock Market Prediction\n\nAll his work is meticulously documented on GitHub!",
+                reply: "💼 Featured Projects:\n\n🤖 J.A.R.V.I.S. — Voice-Controlled Agentic AI OS\n📈 AI-Powered Stock Market Multi-Agent System (Live!)\n🌸 Flowers Knowledge RAG Chatbot (Live!)\n📊 Zomato Analytics Dashboard\n🧠 NLP Sentiment Engine\n\nAll his work is meticulously documented on GitHub!",
                 chips: ['🌐 Live Demos', '🐙 GitHub', '📞 Contact']
             },
             {

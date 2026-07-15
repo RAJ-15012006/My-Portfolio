@@ -71,9 +71,9 @@ My-Portfolio/
 ├── script.js           # Animations, chatbot, charts
 ├── assets/             # Images & certificates
 │   ├── 1.jpg
-│   ├── autoCV.pdf
+│   ├── jarvis_hud_bg.jpg
 │   └── ...certificates
-├── covid.jpg
+├── Raj_Samrendra_Kumar_Resume.pdf  # Compiled CV PDF
 ├── 1730904491792.jpg
 └── README.md
 ```
@@ -96,10 +96,9 @@ My-Portfolio/
 |---|---|---|
 | 🧠 NLP Sentiment Engine | Python · NLTK · Transformers | [GitHub](https://github.com/RAJ-15012006/Sentiment-analysis-project) |
 | 📊 Zomato Analytics Dashboard | Power BI · SQL · DAX | [GitHub](https://github.com/RAJ-15012006/Bangalore-Restaurant-Zomato--analyst) |
-| 🌸 RAG Model Flower | RAG · LLM · Python | [GitHub](https://github.com/RAJ-15012006/RAG_MODEL_FLOWER) |
-| 📈 Time Series Forecaster | Prophet · ARIMA | [GitHub](https://github.com/RAJ-15012006/Time_Series_DataScience) |
-| 💹 Stock Market Analysis | Python · Yfinance · Matplotlib | [GitHub](https://github.com/RAJ-15012006/stock-market-analysis) |
-| 🦠 COVID-19 Prediction | ML Algorithms · Feature Engineering | [GitHub](https://github.com/RAJ-15012006/covid19_dataset) |
+| 🌸 Flowers Knowledge RAG Chatbot | Python · LangChain · Gemini · ChromaDB · Streamlit | [GitHub](https://github.com/RAJ-15012006/RAG_MODEL_FLOWER) / [Live](https://ragmodelflower-raj1.streamlit.app/) |
+| 💹 AI-Powered Stock Market Multi-Agent System | Python · Streamlit · Gen AI · AI Agents | [GitHub](https://github.com/RAJ-15012006/stock-market-analysis) / [Live](https://stockmarket-rajai.streamlit.app/) |
+| 🤖 J.A.R.V.I.S. — Voice-Controlled Agentic AI OS | Python · React · FastAPI · WebSockets | [GitHub](https://github.com/RAJ-15012006) |
 
 ---
 

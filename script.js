@@ -101,9 +101,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // Typed.js
     new Typed('#typed-text', {
         strings: [
-            'AI Engineer Enthusiast',
-            'Data Scientist Enthusiast',
-            'ML Engineer Enthusiast'
+            'AI/ML Intern @ Rubixe',
+            'AI & Generative AI Specialist',
+            'Data Scientist & ML Engineer'
         ],
         typeSpeed: 50,
         backSpeed: 30,
@@ -456,17 +456,22 @@ document.addEventListener('DOMContentLoaded', () => {
         const KB = [
             {
                 keys: ['hi','hello','hey','sup','greet'],
-                reply: "Hey there! 👋 I'm Raj's AI assistant. I can tell you about his education, AI projects, special mentorship offers, or how to contact him directly!",
-                chips: ['🎓 Education', '🔥 Special Offer', '🛠️ Skills', '📞 Contact']
+                reply: "Hey there! 👋 I'm Raj's AI assistant. I can tell you about his AI/ML internship at Rubixe, education, AI projects, special mentorship offers, or how to contact him directly!",
+                chips: ['🏢 Internship', '🎓 Education', '🛠️ Skills', '📞 Contact']
+            },
+            {
+                keys: ['internship','intern','rubixe','experience','work','job'],
+                reply: "💼 Raj is currently working as an AI/ML Intern at Rubixe (Remote), where he develops end-to-end Data Science workflows and machine learning capstone projects involving customer transaction prediction, earthquake damage prediction, and flight price prediction!",
+                chips: ['🛠️ Skills', '💼 Projects', '📞 Contact']
             },
             {
                 keys: ['college','university','parul','education','degree','b.tech','btech','graduating','2027'],
-                reply: "🎓 Raj is a B.Tech student at Parul University, graduating in 2027 with a CGPA of 7.77/10. He's deeply involved in the AI & ML department!",
+                reply: "🎓 Raj is a B.Tech student in Computer Science & Engineering at Parul Institute of Engineering and Technology, graduating in 2027 with a CGPA of 7.77/10.",
                 chips: ['🤖 AIML Interests', '💼 Projects', '📞 Contact']
             },
             {
                 keys: ['aiml','ai ml','enthusiast','interest','passion'],
-                reply: "🤖 Raj is an AIML enthusiast! He specializes in building real-world AI systems, including RAG models, Agentic AI, and custom ML pipelines. He's always looking to push the boundaries of what's possible with data.",
+                reply: "🤖 Raj is an AI/ML Intern at Rubixe specializing in building real-world AI systems, including RAG models, Agentic AI, multi-agent systems, and predictive ML pipelines.",
                 chips: ['💼 Projects', '📜 Certifications', '🔥 Special Offer']
             },
             {
@@ -476,12 +481,12 @@ document.addEventListener('DOMContentLoaded', () => {
             },
             {
                 keys: ['contact','email','hire','reach','connect','phone','mail','number','call','whatsapp'],
-                reply: "📞 You can reach Raj directly here:\n\n📧 Email: rajkumar20053773@gmail.com\n📱 Phone: +91 8591296816\n\nHe's available for freelance, full-time roles, or just a quick tech chat!",
+                reply: "📞 You can reach Raj directly here:\n\n📧 Email: rajkumar20053773@gmail.com\n📱 Phone: +91 8591296816\n\nHe's available for freelance, full-time roles, or technical collaborations!",
                 chips: ['🐙 GitHub', '💼 LinkedIn', '🏠 Main Menu']
             },
             {
                 keys: ['skill','tech','stack','know','language','python','tool'],
-                reply: "🛠️ Raj's tech stack:\n\n• Languages: Python, Java, SQL\n• AI: RAG, Agentic AI, CrewAI, LangChain, LLMs\n• Data: Scikit-Learn, Pandas, Power BI, Tableau\n• Cloud: Azure AI/Data Scientist certified",
+                reply: "🛠️ Raj's tech stack:\n\n• Languages: Python, Java, C, SQL, React, Next.js, Node.js\n• AI/ML: RAG, Agentic AI, TensorFlow, Scikit-Learn, LangChain, LangGraph, Langflow\n• Data Science: Pandas, NumPy, Matplotlib, Seaborn, Feature Engineering\n• Databases & Tools: MongoDB, ChromaDB, FastAPI, Streamlit, Git, Tableau, Power BI, Azure",
                 chips: ['💼 Projects', '📜 Certifications', '🏠 Main Menu']
             },
             {
@@ -491,13 +496,13 @@ document.addEventListener('DOMContentLoaded', () => {
             },
             {
                 keys: ['who','about','yourself','raj','tell me'],
-                reply: "👨‍💻 Raj Samrendra Kumar is an AI Engineer & Data Scientist enthusiast currently graduating in 2027. He's a problem-solver who loves turning complex data into smart AI solutions! 🚀",
-                chips: ['🎓 Education', '🛠️ Skills', '🔥 Special Offer']
+                reply: "👨‍💻 Raj Samrendra Kumar is a Computer Science student & AI/ML Intern at Rubixe. He specializes in Machine Learning, Generative AI, RAG pipelines, and multi-agent systems! 🚀",
+                chips: ['🏢 Internship', '🎓 Education', '🛠️ Skills', '🔥 Special Offer']
             },
             {
                 keys: ['home','menu','restart','main'],
                 reply: "Back to the start! How else can I help you today?",
-                chips: ['🎓 Education', '🛠️ Skills', '💼 Projects', '📞 Contact']
+                chips: ['🏢 Internship', '🎓 Education', '🛠️ Skills', '💼 Projects', '📞 Contact']
             }
         ];
 

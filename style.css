@@ -1785,6 +1785,11 @@ body:hover .cursor-dot {
   font-size: 1.6rem;
   color: #00F5FF;
 }
+.cert-section-header i.fa-nvidia,
+.cert-item .fa-nvidia {
+  color: #76B900;
+  filter: drop-shadow(0 0 10px rgba(118, 185, 0, 0.4));
+}
 .cert-section-header h3 {
   font-size: 1.3rem;
   color: #fff;

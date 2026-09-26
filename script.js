@@ -500,6 +500,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 chips: ['🏢 Internship', '🎓 Education', '🛠️ Skills', '🔥 Special Offer']
             },
             {
+                keys: ['cert','certification','certificate','nvidia','microsoft','oracle','aws','deloitte'],
+                reply: "📜 Raj holds verified certifications from NVIDIA (Building RAG Agents with LLMs), Microsoft (Azure Data Scientist, Azure AI Engineer, Fabric Data Engineer, Cloud & AI Fundamentals), Oracle (AI Foundation, Data Science, Generative AI), Deloitte, and AWS!",
+                chips: ['💼 Projects', '🛠️ Skills', '📞 Contact']
+            },
+            {
                 keys: ['home','menu','restart','main'],
                 reply: "Back to the start! How else can I help you today?",
                 chips: ['🏢 Internship', '🎓 Education', '🛠️ Skills', '💼 Projects', '📞 Contact']

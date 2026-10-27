@@ -486,22 +486,22 @@ document.addEventListener('DOMContentLoaded', () => {
             },
             {
                 keys: ['skill','tech','stack','know','language','python','tool'],
-                reply: "🛠️ Raj's tech stack:\n\n• Languages: Python, Java, C, SQL, React, Next.js, Node.js\n• AI/ML: RAG, Agentic AI, TensorFlow, Scikit-Learn, LangChain, LangGraph, Langflow\n• Data Science: Pandas, NumPy, Matplotlib, Seaborn, Feature Engineering\n• Databases & Tools: MongoDB, ChromaDB, FastAPI, Streamlit, Git, Tableau, Power BI, Azure",
+                reply: "🛠️ Raj's tech stack:\n\n• Programming: Python, Java, C, SQL\n• AI / ML: TensorFlow, Scikit-Learn, NLP, Computer Vision, Generative AI, Agentic AI, AI Agents, Langflow\n• Data Science: Pandas, NumPy, Matplotlib, Seaborn, Feature Engineering, Model Evaluation\n• Frameworks & APIs: FastAPI, LangChain, LangGraph, Streamlit\n• Databases: MongoDB, ChromaDB\n• Tools & Platforms: Git, Tableau, Power BI, Microsoft Azure",
                 chips: ['💼 Projects', '📜 Certifications', '🏠 Main Menu']
             },
             {
                 keys: ['project','built','shipped','work','portfolio','app','demo'],
-                reply: "💼 Featured Projects:\n\n🤖 J.A.R.V.I.S. — Voice-Controlled Agentic AI OS\n📈 AI-Powered Stock Market Multi-Agent System (Live!)\n🌸 Flowers Knowledge RAG Chatbot (Live!)\n📊 Zomato Analytics Dashboard\n🧠 NLP Sentiment Engine\n\nAll his work is meticulously documented on GitHub!",
+                reply: "💼 Featured Projects:\n\n🤖 J.A.R.V.I.S. — Voice-Controlled Agentic AI OS (Groq LLaMA 3.3 70B, OpenCV & MFCC Biometrics, React HUD)\n🌸 Flowers Knowledge RAG Chatbot (LangChain, Groq LLaMA 3.3 70B, Hugging Face, ChromaDB, Streamlit)\n📊 Zomato Restaurant Analysis Dashboard (51K+ Bangalore records, Power BI, Power Query)\n💹 AI-Powered Stock Market Multi-Agent System (Live!)\n🧠 NLP Sentiment Engine\n\nAll documented on GitHub!",
                 chips: ['🌐 Live Demos', '🐙 GitHub', '📞 Contact']
             },
             {
                 keys: ['who','about','yourself','raj','tell me'],
-                reply: "👨‍💻 Raj Samrendra Kumar is a Computer Science student & AI/ML Intern at Rubixe. He specializes in Machine Learning, Generative AI, RAG pipelines, and multi-agent systems! 🚀",
+                reply: "👨‍💻 Raj Samrendra Kumar is a Computer Science student (Parul University, 7.77 CGPA) & AI/ML Intern at Rubixe. He has practical experience in Machine Learning, Python, Data Analysis, and Generative AI, building RAG, multi-agent systems, and predictive workflows! 🚀",
                 chips: ['🏢 Internship', '🎓 Education', '🛠️ Skills', '🔥 Special Offer']
             },
             {
                 keys: ['cert','certification','certificate','nvidia','microsoft','oracle','aws','deloitte'],
-                reply: "📜 Raj holds verified certifications from NVIDIA (Building RAG Agents with LLMs), Microsoft (Azure Data Scientist, Azure AI Engineer, Fabric Data Engineer, Cloud & AI Fundamentals), Oracle (AI Foundation, Data Science, Generative AI), Deloitte, and AWS!",
+                reply: "📜 Raj holds verified certifications from Microsoft (Azure AI Engineer Associate AI-102, Azure Data Scientist DP-100, Fabric Data Engineer, Cloud & AI Fundamentals), NVIDIA (Building RAG Agents with LLMs), Oracle (Generative AI Professional, Data Science, AI Foundation), Deloitte, and AWS!",
                 chips: ['💼 Projects', '🛠️ Skills', '📞 Contact']
             },
             {

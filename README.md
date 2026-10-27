@@ -52,12 +52,12 @@ A modern, fully responsive personal portfolio built with **HTML, CSS & JavaScrip
 ## 🧠 Skills Covered
 
 ```
-Programming      →  Python · Java · SQL
-Machine Learning →  Linear Regression · Logistic Regression · KNN · Naive Bayes
-Data Science     →  Power BI · Tableau · Pandas · Numpy · Matplotlib · Scikit-Learn
-AI               →  RAG · Agentic AI · CrewAI · LangChain · LLMs · Prompt Engineering
-                    Vector Databases · Hugging Face · OpenAI API · Generative AI
-Big Data         →  PySpark
+Programming      →  Python · Java · C · SQL
+AI / ML          →  TensorFlow · Scikit-Learn · NLP · Computer Vision · Generative AI · Agentic AI · AI Agents · Langflow
+Data Science     →  Pandas · NumPy · Matplotlib · Seaborn · Feature Engineering · Model Evaluation
+Frameworks & APIs→  FastAPI · LangChain · LangGraph · Streamlit
+Databases        →  MongoDB · ChromaDB
+Tools & Platforms→  Git · Tableau · Power BI · Microsoft Azure
 ```
 
 ---
@@ -70,11 +70,7 @@ My-Portfolio/
 ├── style.css           # All styles
 ├── script.js           # Animations, chatbot, charts
 ├── assets/             # Images & certificates
-│   ├── 1.jpg
-│   ├── jarvis_hud_bg.jpg
-│   └── ...certificates
-├── Raj_Samrendra_Kumar_Resume.pdf  # Compiled CV PDF
-├── 1730904491792.jpg
+├── Raj_Samrendra_Kumar_Resume.pdf  # Updated Resume PDF
 └── README.md
 ```
 
@@ -83,8 +79,9 @@ My-Portfolio/
 ## 🏅 Certifications
 
 <table>
-<tr><td>🪟 <b>Microsoft</b></td><td>Azure Data Scientist · AZ-900 · AI-900 · PL-900 · DP-700 · AI-102</td></tr>
-<tr><td>🔶 <b>Oracle</b></td><td>AI Foundation · Data Science · Generative AI</td></tr>
+<tr><td>⭐ <b>Resume Featured</b></td><td>Microsoft Certified: Azure AI Engineer Associate (AI-102) · NVIDIA: Building RAG Agents with LLMs · OCI Generative AI Professional</td></tr>
+<tr><td>🪟 <b>Microsoft</b></td><td>Azure Data Scientist (DP-100) · AZ-900 · AI-900 · PL-900 · Fabric Data Engineer (DP-700)</td></tr>
+<tr><td>🔶 <b>Oracle</b></td><td>Oracle AI Foundation · Oracle Data Science Professional</td></tr>
 <tr><td>🏢 <b>Others</b></td><td>Deloitte Data Analytics · AWS Solutions Architecture</td></tr>
 </table>
 
@@ -94,11 +91,11 @@ My-Portfolio/
 
 | Project | Tech | Link |
 |---|---|---|
-| 🧠 NLP Sentiment Engine | Python · NLTK · Transformers | [GitHub](https://github.com/RAJ-15012006/Sentiment-analysis-project) |
-| 📊 Zomato Analytics Dashboard | Power BI · SQL · DAX | [GitHub](https://github.com/RAJ-15012006/Bangalore-Restaurant-Zomato--analyst) |
-| 🌸 Flowers Knowledge RAG Chatbot | Python · LangChain · Gemini · ChromaDB · Streamlit | [GitHub](https://github.com/RAJ-15012006/RAG_MODEL_FLOWER) / [Live](https://ragmodelflower-raj1.streamlit.app/) |
+| 🤖 J.A.R.V.I.S. — Voice-Controlled Agentic AI OS | Python · React · FastAPI · WebSockets · Groq LLaMA 3.3 | [GitHub](https://github.com/RAJ-15012006) |
+| 🌸 Flowers Knowledge RAG Chatbot | Python · LangChain · Groq LLaMA 3.3 · Hugging Face · ChromaDB · Streamlit | [GitHub](https://github.com/RAJ-15012006/RAG_MODEL_FLOWER) / [Live](https://ragmodelflower-raj1.streamlit.app/) |
+| 📊 Zomato Restaurant Analysis Dashboard | Power BI · Power Query · Data Analysis · SQL | [GitHub](https://github.com/RAJ-15012006/Bangalore-Restaurant-Zomato--analyst) |
 | 💹 AI-Powered Stock Market Multi-Agent System | Python · Streamlit · Gen AI · AI Agents | [GitHub](https://github.com/RAJ-15012006/stock-market-analysis) / [Live](https://stockmarket-rajai.streamlit.app/) |
-| 🤖 J.A.R.V.I.S. — Voice-Controlled Agentic AI OS | Python · React · FastAPI · WebSockets | [GitHub](https://github.com/RAJ-15012006) |
+| 🧠 NLP Sentiment Engine | Python · NLTK · Transformers | [GitHub](https://github.com/RAJ-15012006/Sentiment-analysis-project) |
 
 ---
 
